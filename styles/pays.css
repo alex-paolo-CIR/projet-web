@@ -3,7 +3,10 @@
 }
 
 #Argentine {
-      background-image: url('../images/accueil.jpg');
+  background-image: url('../images/accueil.jpg');
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .overlay {
@@ -16,10 +19,24 @@
   z-index: 1; 
 }
 
-.ObjectsPresetation{
-    position:relative;
-    z-index: 2;
+.ArgentineContainer{
+  display:flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+  flex-direction: row;
 }
+
+.ArgentinePresentation{
+  display:flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100vh;
+  margin: 0px;
+  align-items: center;
+}
+
 .ObjectsPresetation .TitleCountry{
     position: relative;
     font-size:150%;
@@ -27,22 +44,16 @@
     padding: 0;
     background-color: rgba(144, 140, 140, 0.5);
     border-radius: 2em;
-    padding: auto; 
-}
-
-#Argentine{
-  margin:0px;
-}
-.ArgentineContainer{
-  display:flex;
-  width: 100%;
-  height: 100vh;
+    padding: auto;
+    width: 250px;
 
 }
-.ArgentinePresentation{
-  display:flex;
-  flex-direction: column;
+
+.CountryPresentation{
   width: 50%;
-  height: 100vh;
-  margin: 0px;
+  text-align: center;
 }
+
+
+
+
