@@ -16,11 +16,11 @@
   z-index: 1; 
 }
 
-.TitleCountry{
+.ObjectsPresetation{
     position:relative;
     z-index: 2;
 }
-.TitleCountry p{
+.ObjectsPresetation .TitleCountry{
     position: relative;
     font-size:150%;
     text-align: center;
