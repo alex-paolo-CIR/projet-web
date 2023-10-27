@@ -1,5 +1,22 @@
+*{
+    font-family: sans-serif;
+}
+
+body {
+      background-image: url('../images/accueil.jpg');
+}
+
 .TitleCountry{
-  margin:auto;
+    position:relative;
+    z-index: 2;
+    background-color: rgba(144, 140, 140, 0.5);
+    border-radius: 2em;
+    width: auto;
+}
+.TitleCountry p{
+    font-size:15;
+    text-align: center;
+    padding: 0;
 }
 
 #Argentine{
@@ -8,15 +25,13 @@
 .ArgentineContainer{
   display:flex;
   width: 100%;
-  height: 100%;
-  background-color: #4facd4;
-  margin:auto;
+  height: 100vh;
 
 }
-.ArgentineContainer .ArgentinePresentation{
+.ArgentinePresentation{
   display:flex;
+  flex-direction: column;
   width: 50%;
-  height: 100%;
-  background-color: red;
+  height: 100vh;
   margin: 0px;
 }
