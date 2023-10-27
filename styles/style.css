@@ -25,7 +25,7 @@ body {
   justify-content: center;
   flex-direction: column; 
   height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
-  vertical-align: middle;
+  vertical-align: middle; /*met le truc au milieu verticalement*/
 }
 .boutton_en_savoir_plus{
   position: relative;
