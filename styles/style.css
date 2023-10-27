@@ -29,4 +29,5 @@ body {
   background-color: yellow;
   border: solid 0px black;
   border-radius: 0.5em;
+  z-index: 2;
 }
