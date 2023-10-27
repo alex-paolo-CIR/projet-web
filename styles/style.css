@@ -1,7 +1,12 @@
+*{
+  font-family: sans-serif;
+}
+
 body {
   background-image: url('../images/accueil.jpg');
   background-size: cover;
   background-attachment: fixed;
+  color: white;
 }
 
 .overlay {
@@ -16,9 +21,7 @@ body {
 
 .contenu {
   position: relative; 
-  z-index: 2;
-  color: white; 
-  font-family: sans-serif; 
+  color: white;  
   text-align: center; 
   display: flex; 
   align-items: center; 
@@ -34,7 +37,6 @@ body {
   border-radius: 2em;
   padding: 0.5em 1em;
   width: 100px;
-  z-index: 2;
 }
 .boutton_en_savoir_plus a{
   text-align: center;
@@ -43,6 +45,10 @@ body {
 }
 .boutton_en_savoir_plus:hover{
   cursor: pointer;
+}
+#presentation{
+  width: auto;
+  text-align: center;
 }
 
 
