@@ -22,8 +22,10 @@
   text-align: center; 
   display: flex; 
   align-items: center; 
-  justify-content: center; 
-  height: 80vh; 
+  justify-content: center;
+  flex-direction: column; 
+  height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
+  vertical-align: middle;
 }
 .boutton_en_savoir_plus{
   position: relative;
