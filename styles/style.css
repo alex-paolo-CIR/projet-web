@@ -25,3 +25,8 @@ body {
   justify-content: center; 
   height: 80vh; 
 }
+.boutton_en_savoir_plus{
+  background-color: yellow;
+  border: solid 0px black;
+  border-radius: 0.5em;
+}
