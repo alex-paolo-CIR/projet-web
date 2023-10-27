@@ -37,11 +37,7 @@
   align-items: center;
 }
 
-.TitleCountry{
-    position:relative;
-    z-index: 2;
-}
-.TitleCountry p{
+.ObjectsPresetation .TitleCountry{
     position: relative;
     font-size:150%;
     text-align: center;
