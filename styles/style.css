@@ -7,6 +7,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: white;
+  margin: 0% 10%;
 }
 
 .overlay {
@@ -36,7 +37,8 @@ body {
   border: solid 0px black;
   border-radius: 2em;
   padding: 0.5em 1em;
-  width: 100px;
+  max-width: 100px;
+  
 }
 .boutton_en_savoir_plus a{
   text-align: center;
