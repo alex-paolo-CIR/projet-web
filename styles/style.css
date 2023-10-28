@@ -60,6 +60,29 @@
   text-decoration: none;
   color: white;
 }
+.conteneur_pays{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgba(149, 149, 149, 0.4);
+  border: solid black 0px;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 300px;
+  margin: 20px 0px;
+}
+.conteneur_info_pays{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.image_diapo{
+  margin: 20%;
+  width: 90%;
+  height: auto;
+}
 
 
 
