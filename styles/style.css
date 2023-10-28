@@ -40,14 +40,18 @@
   max-width: 100px;
   
 }
+
+.boutton_en_savoir_plus:hover{
+  cursor: pointer;
+}
+
 .boutton_en_savoir_plus a{
   text-align: center;
   color: white;
   text-decoration: none;
+  font-size: 16px;
 }
-.boutton_en_savoir_plus:hover{
-  cursor: pointer;
-}
+
 #presentation{
   width: auto;
   text-align: center;
