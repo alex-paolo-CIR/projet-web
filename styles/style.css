@@ -2,7 +2,7 @@
   font-family: sans-serif;
 }
 
-body {
+#Accueil{
   background-image: url('../images/accueil.jpg');
   background-size: cover;
   background-attachment: fixed;
