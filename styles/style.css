@@ -56,10 +56,7 @@
   width: auto;
   text-align: center;
 }
-.boutton_decouvrir a{
-  text-decoration: none;
-  color: white;
-}
+
 .conteneur_pays{
   display: flex;
   flex-direction: row;
@@ -67,22 +64,34 @@
   background-color: rgba(149, 149, 149, 0.4);
   border: solid black 0px;
   border-radius: 0.5em;
-  width: 100%;
+  width: 70%;
   height: 300px;
   margin: 20px 0px;
 }
-.conteneur_info_pays{
-  width: 50%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.conteneur_pays:hover{
+  background-color: rgba(117, 117, 117, 0.5);
 }
 .image_diapo{
-  margin: 20%;
+  margin: 5%;
   width: 90%;
   height: auto;
 }
+.conteneur_info_pays{
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.boutton_decouvrir a{
+  text-decoration: none;
+  padding-bottom: 50px;
+  font-size: 19;
+}
+.boutton_decouvrir{
+  text-align: right;
+}
+
 
 
 
