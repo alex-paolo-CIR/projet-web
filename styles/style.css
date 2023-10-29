@@ -64,12 +64,15 @@
   background-color: rgba(149, 149, 149, 0.4);
   border: solid black 0px;
   border-radius: 0.5em;
-  width: 70%;
+  width: 800px;
   height: 300px;
   margin: 20px 0px;
 }
 .conteneur_pays:hover{
-  background-color: rgba(117, 117, 117, 0.5);
+  background-color: rgba(148, 147, 147, 0.7);
+}
+.conteneur_diapo{
+  width: 60%;
 }
 .image_diapo{
   margin: 5%;
@@ -86,10 +89,22 @@
 .boutton_decouvrir a{
   text-decoration: none;
   padding-bottom: 50px;
-  font-size: 19;
+  font-size: 22px;
+}
+.boutton_decouvrir a:hover{
+  color: rgb(13, 13, 160);
 }
 .boutton_decouvrir{
   text-align: right;
+}
+@media screen and (max-width: 800px) {
+  .conteneur_pays{
+    flex-direction: column;
+    height: 600px;
+  }
+  #presentation{
+    text-align: center;
+  }
 }
 
 
