@@ -57,6 +57,42 @@
   text-align: center;
 }
 
+.conteneur_presentation{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 500px;
+  padding-left: 5%;
+}
+
+.conteneur_colone{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  align-items: center;
+}
+
+.categorie_presentation{
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 200px;
+}
+
+.categorie_presentation img{
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.titre_texte{
+  width: 70%;
+}
+.titre_texte h3{
+  text-decoration: underline;
+}
+
 .conteneur_pays{
   display: flex;
   flex-direction: row;
