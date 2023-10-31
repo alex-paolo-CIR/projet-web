@@ -151,6 +151,13 @@ html {
     text-align: center;
   }
 }
+@media screen and (max-width : 1000px){
+  .conteneur_presentation{
+    flex-direction: column;
+    height: 1000px;
+    width: 600px;
+  }
+}
 
 
 
