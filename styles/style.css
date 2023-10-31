@@ -1,5 +1,5 @@
 *{
-  font-family: sans-serif;
+  font-family: "Rubik",sans-serif;
 }
 
 html {
@@ -19,7 +19,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* couleur noir semi-transparente */
+  background-color: rgba(0, 0, 0, 0.6); /* couleur noir semi-transparente */
   z-index: 1; 
 }
 
@@ -60,8 +60,8 @@ html {
   text-align: center;
   font-size: 40px;
   font-weight: bold;
-  text-decoration: underline;
-  font-family: "Oswald", sans-serif;
+  /* text-decoration: underline; */
+  /* font-family: "Oswald", sans-serif; */
 
 }
 
@@ -76,7 +76,7 @@ html {
 .conteneur_colone{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   width: 50%;
   align-items: center;
 }
@@ -89,6 +89,7 @@ html {
 }
 
 .categorie_presentation img{
+  position: relative;
   width: 40px;
   height: 40px;
   padding-top: 10px;
@@ -111,6 +112,7 @@ html {
   border-radius: 0.5em;
   width: 800px;
   height: 300px;
+  border: 2px solid white;
   margin: 20px 0px;
 }
 .conteneur_pays:hover{
@@ -129,7 +131,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 .boutton_decouvrir a{
   text-decoration: none;
@@ -137,10 +139,18 @@ html {
   font-size: 22px;
 }
 .boutton_decouvrir a:hover{
-  color: rgb(13, 13, 160);
+  color: rgb(11, 218, 255);
 }
 .boutton_decouvrir{
-  text-align: right;
+  position: relative;
+  color: white;
+  background-color: rgb(255, 255, 255); 
+  border: solid 0px black;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  max-width: 230px;
+  text-align: center;
+  left: 15px;  
 }
 @media screen and (max-width: 800px) {
   .conteneur_pays{

@@ -5,7 +5,7 @@
 }
 
 #Argentine {
-  background-image: url('../images/argentine/Argentine.png');
+  background-image: url("../images/argentine/Argentine.png");
   color: white;
   background-size: cover;
   background-attachment: fixed;
