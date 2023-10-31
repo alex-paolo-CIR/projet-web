@@ -137,6 +137,8 @@ html {
   text-decoration: none;
   padding-bottom: 50px;
   font-size: 22px;
+  color: black;
+  font-weight: bold;
 }
 .boutton_decouvrir a:hover{
   color: rgb(11, 218, 255);
