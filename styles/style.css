@@ -2,6 +2,9 @@
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 #Accueil{
   background-image: url('../images/accueil.jpg');
   background-size: cover;
@@ -55,6 +58,11 @@
 #presentation{
   width: auto;
   text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: "Oswald", sans-serif;
+
 }
 
 .conteneur_presentation{
@@ -88,6 +96,7 @@
 
 .titre_texte{
   width: 70%;
+  padding-left: 10px;
 }
 .titre_texte h3{
   text-decoration: underline;
