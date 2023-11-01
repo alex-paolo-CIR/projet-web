@@ -25,7 +25,7 @@ html {
 }
 
 .contenu {
-  position: relative; 
+  width: 100%;
   color: white;  
   text-align: center; 
   display: flex; 
@@ -34,15 +34,14 @@ html {
   flex-direction: column; 
   height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
   vertical-align: middle; /*met le truc au milieu verticalement*/
+  background-color: aqua;
 }
 .boutton_en_savoir_plus{
-  position: relative;
   background-color: rgb(255, 119, 0);
   border: solid 0px black;
   border-radius: 2em;
   padding: 0.5em 1em;
-  max-width: 100px;
-  
+  width: 100px;
 }
 
 .boutton_en_savoir_plus:hover{
@@ -169,6 +168,16 @@ html {
   }
   #presentation{
     text-align: center;
+  }
+  .conteneur_diapo{
+    width: 100%;
+  }
+  .conteneur_info_pays{
+    width: 90%;
+    align-items: center;
+  }
+  .boutton_decouvrir{
+    left: 0%;
   }
 }
 @media screen and (max-width : 1000px){
