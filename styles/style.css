@@ -164,9 +164,24 @@ html {
 
 @media screen and (max-width: 800px) {
   #presentation{
-    text-align: center;
+    height: 1000px;
+    width: 100%;
+    align-items: center;
+  }
+  .conteneur_presentation{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
   }
   .categorie_presentation{
+    width: 100%;
+  }
+  .conteneur_colone{
+    width: 100%;
+  }
+  .conteneur_pays{
+    flex-direction: column;
+    height: 700px;
     width: 100%;
   }
   .conteneur_diapo{
@@ -180,7 +195,7 @@ html {
     left: 0%;
   }
 }
-@media screen and (max-width : 1000px){
+@media screen and (max-width : 1000px) and (min-width : 801px){
   .conteneur_presentation{
     flex-direction: column;
     width: 100%;
@@ -196,8 +211,15 @@ html {
   }
   .conteneur_pays{
     flex-direction: column;
-    height: 600px;
+    height: 700px;
     width: 100%;
+  }
+  .conteneur_diapo{
+    width: 90%;
+  }
+  .conteneur_info_pays{
+    width: 90%;
+    align-items: center;
   }
 }
 
