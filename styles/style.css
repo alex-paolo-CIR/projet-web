@@ -12,6 +12,7 @@ html {
   color: white;
   margin-left: 10%;
   margin-right: 10%;
+  border: solid red 1px;
 }
 
 .overlay {
@@ -34,7 +35,7 @@ html {
   flex-direction: column; 
   height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
   vertical-align: middle; /*met le truc au milieu verticalement*/
-  /* background-color: rgba(0, 255, 255, 0.148); */
+  background-color: rgba(0, 255, 255, 0.148);
 }
 .boutton_en_savoir_plus{
   background-color: rgb(255, 119, 0);
@@ -160,6 +161,7 @@ html {
   text-align: center;
   left: 15px;  
 }
+
 @media screen and (max-width: 800px) {
   .conteneur_pays{
     flex-direction: column;
@@ -178,6 +180,9 @@ html {
   }
   .boutton_decouvrir{
     left: 0%;
+  }
+  #Accueil{
+    margin: 0%;
   }
 }
 @media screen and (max-width : 1000px){
