@@ -180,7 +180,7 @@ html {
     flex-direction: column;
     height: 700px;
     width: 100%;
-    justify-content: space-between;
+    justify-content:space-evenly;
   }
   .conteneur_diapo{
     width: 100%;
