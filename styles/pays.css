@@ -29,13 +29,21 @@
 
 .presentation {
   display: flex;
-  flex-direction: row;
-  width: 1000px;
+  flex-direction: column;
+  width: 100%;
   height: 100vh;
-  justify-content: space-around;
-  text-align: center;
+  justify-content: center;
+  background-color: rgba(0, 255, 255, 0.336);
 }
-.Colonne_intro{
+.teste{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction:row;
+  justify-content: space-around;
+}
+
+.Colonne_Intro{
   display: flex;
   width: 450px;
   flex-direction: column;
@@ -47,7 +55,9 @@
   width: 90%;
 }
 .Image_intro{
-  width: 90%;
+  width: 70%;
+  border: solid 0px;
+  border-radius: 0.5em;
 }
 
 .title {
