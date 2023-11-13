@@ -178,7 +178,7 @@ html {
   }
   .conteneur_pays{
     flex-direction: column;
-    height: 700px;
+    height: 60vh;
     width: 100%;
     justify-content:space-evenly;
   }
@@ -218,6 +218,15 @@ html {
   .conteneur_info_pays{
     width: 90%;
     align-items: center;
+  }
+}
+@media screen and (max-width : 380px) {
+  .conteneur_pays{
+    height: 70vh;
+  }
+  .boutton_decouvrir{
+    width: 200px;
+    height: 50px;
   }
 }
 
