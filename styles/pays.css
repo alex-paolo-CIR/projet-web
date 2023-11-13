@@ -32,21 +32,26 @@
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  background-color: rgba(0, 255, 255, 0.297);
 }
 
 .Colonne_Intro{
   display: flex;
-  width: 450px;
+  width: 100%;
   flex-direction: column;
-  height: 700px;
+  height: 50%;
   align-items: center;
   padding: 10% 0%;
+}
+.Titre_intro{
+  font-size: 20px;
 }
 .Texte_intro{
   text-align: center;
   width: 90%;
+  font-size: 13px;
 }
 .Image_intro{
   width: 70%;
