@@ -55,6 +55,7 @@ body{
   flex-direction: column;
   height: 50%;
   align-items: center;
+  justify-content: space-evenly;
   padding: 5% 0%;
 }
 .Titre_intro{
