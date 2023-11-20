@@ -72,20 +72,25 @@ body{
   border: solid 0px;
   border-radius: 0.5em;
 }
-section{
+.conteneur_destination{
   width: 100%;
-  height: 200px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
 }
+.destination{
+  width: 100%;
+}
 section iframe{
   width: 100%;
   height: 100px;
 }
-section p{
-  padding-left: 25%;
+.conteneur_destination a{
+  padding-left: 30%;
+  text-decoration: none;
+  color: white;
 }
 
 
