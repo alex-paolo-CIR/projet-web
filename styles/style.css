@@ -136,6 +136,7 @@ html {
   display: flex;
   flex-direction: column;
   /* justify-content: space-around; */
+  align-items: center;
 }
 .boutton_decouvrir a{
   display: block;
@@ -156,9 +157,9 @@ html {
   border: solid 0px black;
   border-radius: 2em;
   padding: 0.5em 1em;
-  max-width: 230px;
+  height: 50px;
+  width: 70%;
   text-align: center;
-  left: 15px;  
 }
 
 @media screen and (max-width: 800px) {
@@ -182,7 +183,7 @@ html {
     flex-direction: column;
     height: 60vh;
     width: 100%;
-    justify-content:space-evenly;
+    justify-content:space-around;
   }
   .conteneur_diapo{
     width: 100%;
