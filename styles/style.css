@@ -1,7 +1,7 @@
+/*Code generale, fait effet sur toute la page.*/
 *{
   font-family: "Rubik",sans-serif;
 }
-
 html {
   scroll-behavior: smooth;
 }
@@ -13,7 +13,6 @@ html {
   margin-left: 10%;
   margin-right: 10%;
 }
-
 .overlay {
   position: fixed;
   top: 0;
@@ -24,7 +23,9 @@ html {
   z-index: 1; 
 }
 
-.contenu {
+/*Code qui s'occupe de la mise en page pour l'écran quand on arrive sur le site*/
+
+#Titre {
   width: 100%;
   color: white;  
   text-align: center; 
@@ -35,6 +36,7 @@ html {
   height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
   vertical-align: middle; /*met le truc au milieu verticalement*/
 }
+
 .boutton_en_savoir_plus{
   background-color: rgb(255, 119, 0);
   border: solid 0px black;
@@ -42,17 +44,17 @@ html {
   padding: 0.5em 1em;
   width: 100px;
 }
-
 .boutton_en_savoir_plus:hover{
   cursor: pointer;
 }
-
 .boutton_en_savoir_plus a{
   text-align: center;
   color: white;
   text-decoration: none;
   font-size: 16px;
 }
+
+/*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
 
 #presentation{
   height: 100vh;
@@ -61,7 +63,6 @@ html {
   align-items: center;
   width: 100%;
 }
-
 #presentation_titre{
   text-align: center;
   font-size: 40px;
@@ -79,7 +80,6 @@ html {
   padding-left: 5%;
   align-items: center;
 }
-
 .conteneur_colone{
   display: flex;
   flex-direction: column;
@@ -94,7 +94,6 @@ html {
   width: 500px;
   height: 200px;
 }
-
 .categorie_presentation img{
   position: relative;
   width: 40px;
@@ -106,6 +105,8 @@ html {
   width: 70%;
   padding-left: 10px;
 }
+
+/*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
 .conteneur_pays{
   display: flex;
@@ -122,6 +123,7 @@ html {
 .conteneur_pays:hover{
   background-color: rgba(148, 147, 147, 0.7);
 }
+
 .conteneur_diapo{
   width: 60%;
 }
@@ -144,23 +146,12 @@ html {
   margin: 0px;
   text-align: center;
 }
+
 .titre_pays{
   font-size: 22px;
   font-weight: bold;
 }
 
-.boutton_decouvrir a{
-  display: block;
-  text-decoration: none;
-  padding-bottom: 50px;
-  font-size: 20px;
-  color: black;
-  font-weight: bold;
-  height: 8px;
-}
-.boutton_decouvrir a:hover{
-  color:rgb(255, 119, 0);
-}
 .boutton_decouvrir{
   position: relative;
   color: white;
@@ -173,92 +164,20 @@ html {
   text-align: center;
   margin-bottom: 5px;
 }
-
-@media screen and (max-width: 800px) {
-  #presentation{
-    height: 1000px;
-    width: 100%;
-    align-items: center;
-  }
-  .conteneur_presentation{
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .categorie_presentation{
-    width: 100%;
-  }
-  .conteneur_colone{
-    width: 100%;
-  }
-  .conteneur_pays{
-    flex-direction: column;
-    height: 60vh;
-    width: 100%;
-    justify-content:space-around;
-  }
-  .conteneur_diapo{
-    width: 100%;
-  }
-  .conteneur_info_pays{
-    width: 90%;
-    align-items: center;
-  }
-  .boutton_decouvrir a{
-    font-size: 18px;
-    height: 0px;
-  }
-  .boutton_decouvrir {
-    left: 0%;
-    width: 60%;
-    height: 40px;
-  }
+.boutton_decouvrir a{
+  display: block;
+  text-decoration: none;
+  padding-bottom: 50px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  height: 8px;
 }
-@media screen and (max-width : 1000px) and (min-width : 801px){
-  .conteneur_presentation{
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-  }
-  .conteneur_colone{
-    width: 100%;
-  }
-  #presentation{
-    height: 1000px;
-    width: 100%;
-    align-items: center;
-  }
-  .conteneur_pays{
-    flex-direction: column;
-    height: 700px;
-    width: 100%;
-  }
-  .conteneur_diapo{
-    width: 90%;
-  }
-  .conteneur_info_pays{
-    width: 90%;
-    align-items: center;
-  }
-}
-@media screen and (max-width : 380px) {
-  .conteneur_pays{
-    height: 70vh;
-  }
-  .conteneur_info_pays{
-    width: 100%;
-  }
-  .boutton_decouvrir a{
-    font-size: 18px;
-    height: 0px;
-  }
-  .boutton_decouvrir {
-    left: 0%;
-    width: 60%;
-    height: 40px;
-  }
+.boutton_decouvrir a:hover{
+  color:rgb(255, 119, 0);
 }
 
+/*Bouton pour remonter tout en haut de la page.*/
 
 .top {
   text-decoration: none;
@@ -272,4 +191,113 @@ html {
   right: 10px;
   z-index: 999;
 }
+
+/*responsive pour grade tablettes/pc*/
+
+@media screen and (max-width : 1000px) and (min-width : 801px){
+  /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
+  #presentation{
+    height: 1000px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .conteneur_presentation{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .conteneur_colone{
+    width: 100%;
+  }
   
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+
+  .conteneur_pays{
+    flex-direction: column;
+    height: 700px;
+    width: 100%;
+  }
+  .conteneur_diapo{
+    width: 90%;
+  }
+  .conteneur_info_pays{
+    width: 90%;
+    align-items: center;
+  }
+  
+}
+
+/*Responsive pour tablettes.*/
+
+@media screen and (max-width: 800px) and (min-width : 381px) {
+  /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
+  #presentation{
+    height: 1000px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .conteneur_presentation{
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .conteneur_colone{
+    width: 100%;
+  }
+
+  .categorie_presentation{
+    width: 100%;
+  }
+  
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+
+  .conteneur_pays{
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    justify-content:space-around;
+  }
+  .conteneur_diapo{
+    width: 100%;
+  }
+  .conteneur_info_pays{
+    width: 90%;
+    align-items: center;
+  }
+  
+  .boutton_decouvrir {
+    left: 0%;
+    width: 60%;
+    height: 40px;
+  }
+  .boutton_decouvrir a{
+    font-size: 18px;
+    height: 0px;
+  }
+
+}
+
+/*responsive pour telephones.*/
+
+@media screen and (max-width : 380px) {
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+  .conteneur_pays{
+    height: 70vh;
+  }
+  .conteneur_info_pays{
+    width: 100%;
+  }
+
+  .boutton_decouvrir {
+    left: 0%;
+    width: 60%;
+    height: 40px;
+  }
+  .boutton_decouvrir a{
+    font-size: 18px;
+    height: 0px;
+  }
+  
+}  
