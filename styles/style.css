@@ -10,8 +10,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0%, 10%;
 }
 .overlay {
   position: fixed;
