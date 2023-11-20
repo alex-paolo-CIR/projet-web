@@ -10,8 +10,7 @@ html {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0%, 10%;
 }
 .overlay {
   position: fixed;
@@ -183,7 +182,6 @@ html {
   text-decoration: none;
   padding: 10px;
   font-family: sans-serif;
-  color: #fff;
   background: #868686;
   border-radius: 100px;
   position: fixed;
@@ -194,7 +192,7 @@ html {
 
 /*responsive pour grade tablettes/pc*/
 
-@media screen and (max-width : 1000px) and (min-width : 801px){
+@media screen and (max-width : 1000px) and (min-width : 801px) {
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
   #presentation{
     height: 1000px;
@@ -225,12 +223,12 @@ html {
     width: 90%;
     align-items: center;
   }
-  
+
 }
 
 /*Responsive pour tablettes.*/
 
-@media screen and (max-width: 800px) and (min-width : 381px) {
+@media screen and (max-width: 800px) {
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
   #presentation{
     height: 1000px;
