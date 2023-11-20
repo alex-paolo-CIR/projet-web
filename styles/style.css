@@ -194,7 +194,7 @@ html {
 
 /*responsive pour grade tablettes/pc*/
 
-@media screen and (max-width : 1000px) and (min-width : 801px){
+@media screen and (max-width : 1000px) and (min-width : 801px) {
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
   #presentation{
     height: 1000px;
@@ -225,12 +225,12 @@ html {
     width: 90%;
     align-items: center;
   }
-  
+
 }
 
 /*Responsive pour tablettes.*/
 
-@media screen and (max-width: 800px) and (min-width : 381px) {
+@media screen and (max-width: 800px) {
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
   #presentation{
     height: 1000px;
