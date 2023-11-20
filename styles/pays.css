@@ -73,14 +73,19 @@ body{
   border-radius: 0.5em;
 }
 section{
+  width: 100%;
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  justify-content: space-around;
 }
 section iframe{
   width: 100%;
   height: 100px;
+}
+section p{
+  padding-left: 25%;
 }
 
 
