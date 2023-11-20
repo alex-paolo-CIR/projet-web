@@ -138,11 +138,13 @@ html {
   /* justify-content: space-around; */
 }
 .boutton_decouvrir a{
+  display: block;
   text-decoration: none;
   padding-bottom: 50px;
   font-size: 22px;
   color: black;
   font-weight: bold;
+  height: 8px;
 }
 .boutton_decouvrir a:hover{
   color:rgb(255, 119, 0);
