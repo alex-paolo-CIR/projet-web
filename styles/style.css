@@ -139,6 +139,15 @@ html {
   justify-content: space-around;
   align-items: center;
 }
+.conteneur_info_pays p{
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+.titre_pays{
+  font-size: 22px;
+  font-weight: bold;
+}
 
 .boutton_decouvrir a{
   display: block;
@@ -162,6 +171,7 @@ html {
   height: 45px;
   width: 70%;
   text-align: center;
+  margin-bottom: 5px;
 }
 
 @media screen and (max-width: 800px) {
@@ -234,6 +244,9 @@ html {
 @media screen and (max-width : 380px) {
   .conteneur_pays{
     height: 70vh;
+  }
+  .conteneur_info_pays{
+    width: 100%;
   }
   .boutton_decouvrir a{
     font-size: 18px;
