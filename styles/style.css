@@ -272,7 +272,7 @@ html {
   }
 
 }
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (min-height = 830p) {
   .conteneur_pays{
     display: flex;
     flex-direction: row;
