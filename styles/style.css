@@ -211,11 +211,7 @@ html {
   
   /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
-  .conteneur_pays{
-    flex-direction: column;
-    height: 700px;
-    width: 100%;
-  }
+ 
   .conteneur_diapo{
     width: 90%;
   }
@@ -226,7 +222,7 @@ html {
 
 }
 
-/*Responsive pour tablettes.*/
+/*Responsive pour telephone et petite tablette.*/
 
 @media screen and (max-width: 800px) {
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
@@ -276,8 +272,22 @@ html {
   }
 
 }
+@media screen and (orientation: landscape) {
+  .conteneur_pays{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(149, 149, 149, 0.4);
+    border: solid black 0px;
+    border-radius: 0.5em;
+    width: 800px;
+    height: 300px;
+    border: 2px solid white;
+    margin: 20px 0px;
+  }
+}
 
-/*responsive pour telephones.*/
+/*responsive pour telephones petit*/
 
 @media screen and (max-width : 380px) {
   /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
