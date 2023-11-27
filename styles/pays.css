@@ -115,21 +115,17 @@ section iframe{
   justify-content: space-around;
 }
 
+/*!dipo pour l'argentine*/
 
-
-#diapo_a {
+#diapo_a_txt {
+  text-align: center;
   border:hidden;
 	width: 75%;
-	margin: auto;
+	margin: 0 auto;
 	height: 400px;
 	overflow: hidden;
 }
-#diapo_a .slides_diapos_a img{
-  margin: auto;
-  height: 400px;
-	width: 24.86%;
-}
-#diapo_a .slides_diapos_a {
+#diapo_a_txt .slides_diapos_a_txt {
   border: hidden;
 	height: 400px;
 	position: relative;
@@ -139,7 +135,34 @@ section iframe{
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
-  
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a{
+  float: left;
+  height: 400px;
+  width: 25%;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a{
+  color: black;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
+  background-image: url("../images/argentine/glaciers.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
+  background-image: url("../images/argentine/Cascade.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
+  background-image: url("../images/argentine/Lac.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
+  background-image: url("../images/argentine/PontLac.jpg");
+  background-size: cover;
+  background-position: center center;
 }
 
 @-webkit-keyframes diaporama_a {
