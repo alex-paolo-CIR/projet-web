@@ -117,3 +117,55 @@ section iframe{
 
 
 
+#diapo_a {
+  border:hidden;
+	width: 70%;
+	margin:auto;
+	height: 400px;
+	overflow: hidden;
+}
+#diapo_a .slides_diapos_a img{
+  height: 400px;
+	width: 25%;
+}
+#diapo_a .slides_diapos_a {
+  border:hidden;
+	height: 400px;
+	position: relative;
+	width: 400%;
+	animation-name: diaporama_a;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+  
+}
+
+@-webkit-keyframes diaporama_a {
+  from, 10% {
+    right: 0%;
+  }
+  30%, 40% {
+    right: 100%;
+  }
+  60%, 70% {
+    right: 200%;
+  }
+  90%, to {
+    right: 300%;
+  }
+}
+@keyframes diaporama_a {
+  from, 10% {
+    right: 0%;
+  }
+  30%, 40% {
+    right: 100%;
+  }
+  60%, 70% {
+    right: 200%;
+  }
+  90%, to {
+    right: 300%;
+  }
+}
