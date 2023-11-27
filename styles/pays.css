@@ -171,6 +171,30 @@ section iframe{
   }
 }
 
-@media screen and (min-width : 700px) {
-  
+/*Bouton pour revenir en haut de la page.*/
+
+.top {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+/*Bouton pour revenir a la page d'accueil.*/
+
+.home {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  z-index: 999;
 }
