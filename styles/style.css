@@ -12,13 +12,15 @@
 html {
   scroll-behavior: smooth;
 }
+
 #Accueil{
   background-image: url('../images/accueil.jpg');
   background-size: cover;
   background-attachment: fixed;
+  background-position: center center;
   color: white;
-  margin: 0%, 10%;
 }
+
 .overlay {
   position: fixed;
   top: 0;
@@ -27,7 +29,8 @@ html {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* couleur noir semi-transparente */
   z-index: 1; 
-}
+} 
+
 
 /*Code qui s'occupe de la mise en page pour l'écran quand on arrive sur le site*/
 
