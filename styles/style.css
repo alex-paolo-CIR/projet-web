@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /*Code generale, fait effet sur toute la page.*/
 *{
   font-family: "Rubik",sans-serif;
@@ -28,10 +35,19 @@ html {
   width: 100%;
   color: white;  
   text-align: center; 
+  display: -webkit-box; 
+  display: -ms-flexbox; 
   display: flex; 
-  align-items: center; 
-  justify-content: center;
-  flex-direction: column; 
+  -webkit-box-align: center; 
+      -ms-flex-align: center; 
+          align-items: center; 
+  -webkit-box-pack: center; 
+      -ms-flex-pack: center; 
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; 
   height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
   vertical-align: middle; /*met le truc au milieu verticalement*/
 }
@@ -57,9 +73,16 @@ html {
 
 #presentation{
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 #presentation_titre{
@@ -72,24 +95,43 @@ html {
 }
 
 .conteneur_presentation{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 100%;
   height: 80%;
   padding-left: 5%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .conteneur_colone{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* justify-content: space-between; */
   width: 50%;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .categorie_presentation{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   width: 500px;
   height: 200px;
 }
@@ -108,9 +150,16 @@ html {
 /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
 .conteneur_pays{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: rgba(149, 149, 149, 0.4);
   border: solid black 0px;
   border-radius: 0.5em;
@@ -135,10 +184,18 @@ html {
 .conteneur_info_pays{
   width: 35%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .conteneur_info_pays p{
   width: 100%;
@@ -197,13 +254,20 @@ html {
   #presentation{
     height: 1000px;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .conteneur_presentation{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .conteneur_colone{
     width: 100%;
@@ -217,7 +281,9 @@ html {
   }
   .conteneur_info_pays{
     width: 90%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
 }
@@ -229,13 +295,20 @@ html {
   #presentation{
     height: 1000px;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .conteneur_presentation{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .conteneur_colone{
     width: 100%;
@@ -248,17 +321,23 @@ html {
   /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
   .conteneur_pays{
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     height: 60vh;
     width: 100%;
-    justify-content:space-around;
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
   }
   .conteneur_diapo{
     width: 100%;
   }
   .conteneur_info_pays{
     width: 90%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   
   .boutton_decouvrir {
@@ -274,9 +353,16 @@ html {
 }
 @media screen and (orientation: landscape) and (min-height = 830p) {
   .conteneur_pays{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     background-color: rgba(149, 149, 149, 0.4);
     border: solid black 0px;
     border-radius: 0.5em;
