@@ -115,7 +115,7 @@ section iframe{
   justify-content: space-around;
 }
 
-/*!dipo pour l'argentine*/
+/*!test diapo pour l'argentine*/
 
 #diapo_a_txt {
   text-align: center;
@@ -145,22 +145,22 @@ section iframe{
   color: black;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
-  background-image: url("../images/argentine/glaciers.jpg");
+  background-image: url("../images/argentine/pays/glaciers.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
-  background-image: url("../images/argentine/Cascade.jpg");
+  background-image: url("../images/argentine/pays/Cascade.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
-  background-image: url("../images/argentine/Lac.jpg");
+  background-image: url("../images/argentine/pays/Lac.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
-  background-image: url("../images/argentine/PontLac.jpg");
+  background-image: url("../images/argentine/pays/PontLac.jpg");
   background-size: cover;
   background-position: center center;
 }
