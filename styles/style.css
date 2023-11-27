@@ -250,6 +250,7 @@ html {
   z-index: 999;
 }
 
+
 /*responsive pour grade tablettes/pc*/
 
 @media screen and (max-width : 1000px) and (min-width : 801px) {
