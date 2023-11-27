@@ -170,3 +170,7 @@ section iframe{
     right: 300%;
   }
 }
+
+@media screen and (min-width : 700px) {
+  
+}
