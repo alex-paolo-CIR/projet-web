@@ -250,6 +250,7 @@ html {
   z-index: 999;
 }
 
+
 /*responsive pour grade tablettes/pc*/
 
 @media screen and (max-width : 1000px) and (min-width : 801px) {
@@ -354,7 +355,7 @@ html {
   }
 
 }
-@media screen and (orientation: landscape) and (min-height = 830p) {
+@media screen and (orientation: landscape) and (min-height = 830px) {
   .conteneur_pays{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -373,6 +374,33 @@ html {
     height: 300px;
     border: 2px solid white;
     margin: 20px 0px;
+  }
+}
+@media screen and (height < 830px) and (orientation: landscape)  {
+  .conteneur_pays{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(149, 149, 149, 0.4);
+    border: solid black 0px;
+    border-radius: 0.5em;
+    width: 650px;
+    height: 550px;
+    border: 2px solid white;
+    margin: 20px 0px;
+  }
+  .boutton_decouvrir{
+    height: 20px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 0px;
   }
 }
 
