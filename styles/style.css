@@ -12,17 +12,12 @@
 html {
   scroll-behavior: smooth;
 }
-#Accueil {
+
+#Accueil{
   background-image: url('../images/accueil.jpg');
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
-  margin: 0 10%;
-  /* Ajout d'une hauteur minimale pour éviter le défilement sur iOS */
-  min-height: 100vh;
-  /* Désactivation de la propriété fixed pour éviter des problèmes sur iOS */
-  background-attachment: scroll;
 }
 
 .overlay {
@@ -33,7 +28,8 @@ html {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6); /* couleur noir semi-transparente */
   z-index: 1; 
-}
+} 
+
 
 /*Code qui s'occupe de la mise en page pour l'écran quand on arrive sur le site*/
 
