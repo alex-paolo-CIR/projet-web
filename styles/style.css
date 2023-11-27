@@ -376,6 +376,7 @@ html {
     margin: 20px 0px;
   }
 }
+/*
 @media screen and (height < 830px) and (orientation: landscape)  {
   .conteneur_pays{
     display: -webkit-box;
@@ -403,6 +404,7 @@ html {
     margin-bottom: 0px;
   }
 }
+*/
 
 /*responsive pour telephones petit*/
 
