@@ -119,22 +119,23 @@ section iframe{
 
 #diapo_a {
   border:hidden;
-	width: 70%;
-	margin:auto;
+	width: 75%;
+	margin: auto;
 	height: 400px;
 	overflow: hidden;
 }
 #diapo_a .slides_diapos_a img{
+  margin: auto;
   height: 400px;
-	width: 25%;
+	width: 24.86%;
 }
 #diapo_a .slides_diapos_a {
-  border:hidden;
+  border: hidden;
 	height: 400px;
 	position: relative;
 	width: 400%;
 	animation-name: diaporama_a;
-	animation-duration: 5s;
+	animation-duration: 8s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
