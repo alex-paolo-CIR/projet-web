@@ -128,12 +128,12 @@ section iframe{
   border:hidden;
 	width: 75%;
 	margin: 0 auto;
-	height: 400px;
+	height: 200px;
 	overflow: hidden;
 }
 #diapo_a_txt .slides_diapos_a_txt {
   border: hidden;
-	height: 400px;
+	height: 200px;
 	position: relative;
 	width: 400%;
 	animation-name: diaporama_a;
@@ -144,7 +144,7 @@ section iframe{
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a{
   float: left;
-  height: 400px;
+  height: 200px;
   width: 25%;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a{
