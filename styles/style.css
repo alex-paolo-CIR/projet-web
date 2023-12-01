@@ -14,7 +14,7 @@ html {
 }
 
 #Accueil{
-  background-image: url('../images/accueil.jpg');
+  background-image: url('../images/accueil/accueil.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;

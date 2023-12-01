@@ -115,7 +115,7 @@ section iframe{
   justify-content: space-around;
 }
 
-/*!test diapo pour l'argentine*/
+/*!diapo pour l'argentine*/
 
 #diapo_a_txt {
   text-align: center;
@@ -131,7 +131,7 @@ section iframe{
 	position: relative;
 	width: 400%;
 	animation-name: diaporama_a;
-	animation-duration: 8s;
+	animation-duration: 12s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
