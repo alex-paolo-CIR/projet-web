@@ -119,6 +119,8 @@ section iframe{
 
 #diaporama_envie{
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 #diapo_a_txt {
