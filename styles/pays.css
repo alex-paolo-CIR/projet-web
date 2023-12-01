@@ -122,6 +122,9 @@ section iframe{
   display: flex;
   flex-direction: column;
 }
+.container{
+  margin: 10% 0%;
+}
 
 #diapo_a_txt {
   text-align: center;
