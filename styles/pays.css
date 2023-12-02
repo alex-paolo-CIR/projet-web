@@ -118,11 +118,12 @@ section iframe{
 /*!diapo pour l'argentine*/
 
 #diaporama_envie{
+  height: 50vh;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-.container{
+.diapo_container{
   margin: 10% 0%;
 }
 
@@ -131,27 +132,32 @@ section iframe{
   border:hidden;
 	width: 75%;
 	margin: 0 auto;
-	height: 400px;
+	height: 200px;
 	overflow: hidden;
 }
 #diapo_a_txt .slides_diapos_a_txt {
   border: hidden;
-	height: 400px;
+	height: 200px;
 	position: relative;
 	width: 400%;
 	animation-name: diaporama_a;
-	animation-duration: 12s;
+	animation-duration: 20s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
 	animation-timing-function: linear;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a{
   float: left;
-  height: 400px;
+  height: 200px;
   width: 25%;
 }
-#diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a{
+#diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a a{
+  text-decoration: none;
   color: black;
+}
+#diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a a:hover{
+  text-decoration: underline;
+  color: rgb(255, 119, 0);
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
   background-image: url("../images/argentine/pays/glaciers.jpg");
@@ -286,6 +292,9 @@ section iframe{
   }
   #texte_destination div{
     height: 150px;
+  }
+  #diaporama_envie{
+    height: 100vh;
   }
 
 }
