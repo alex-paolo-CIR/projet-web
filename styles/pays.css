@@ -259,6 +259,7 @@ section iframe{
     display: flex;
     flex-direction: row;
     height: 100vh;
+    justify-content: space-between;
   }
 
   .conteneur_destination{
@@ -266,7 +267,7 @@ section iframe{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 60%;
+    width: 50%;
   }
   .destination{
     margin: 0;
