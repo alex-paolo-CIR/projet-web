@@ -137,7 +137,7 @@ section iframe{
 }
 #diapo_a_txt .slides_diapos_a_txt {
   border: hidden;
-	height: 200px;
+	height: 100%;
 	position: relative;
 	width: 400%;
 	animation-name: diaporama_a;
@@ -148,7 +148,7 @@ section iframe{
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a{
   float: left;
-  height: 200px;
+  height: 100%;
   width: 25%;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a .slides_text_a a{
@@ -295,6 +295,9 @@ section iframe{
   }
   #diaporama_envie{
     height: 100vh;
+  }
+  #diapo_a_txt{
+    height: 400px;
   }
 
 }
