@@ -123,6 +123,9 @@ section iframe{
   display: flex;
   flex-direction: column;
 }
+#diaporama_envie h2{
+  margin-bottom: 5%;
+}
 .diapo_container{
   margin: 10% 0%;
 }
@@ -153,22 +156,22 @@ section iframe{
 }
 
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
-  background-image: url("../images/argentine/");
+  background-image: url("../images/argentine/chute\ d\'iguazu.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
-  background-image: url("../images/argentine/pays/Cascade.jpg");
+  background-image: url("../images/argentine/le\ mole\ pablano.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
-  background-image: url("../images/argentine/pays/Lac.jpg");
+  background-image: url("../images/argentine/gauchos.jpg");
   background-size: cover;
   background-position: center center;
 }
 #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
-  background-image: url("../images/argentine/pays/PontLac.jpg");
+  background-image: url("../images/argentine/puerto\ madero.jpg");
   background-size: cover;
   background-position: center center;
 }
@@ -186,11 +189,14 @@ section iframe{
 }
 .slides_text_a a{
   font-size: 14px;
-  color: white;
-  background-color: rgba(0, 0, 255, 0.132);
+  color: rgb(199, 199, 211);
+  background-color: rgba(0, 0, 255, 0.295);
   text-decoration: none;
-  width: fit-content;
+  width: 60px;
+  border: solid 0px;
+  border-radius: 0.5em;
 }
+
 
 @-webkit-keyframes diaporama_a {
   from, 10% {
@@ -267,11 +273,12 @@ section iframe{
   }
   .Colonne_Intro{
     height: 62%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
   }
   .Image_intro{
     height: 175px;
+    width: 60%;
   }
   article{
     display: flex;
@@ -310,6 +317,9 @@ section iframe{
   }
   #diapo_a_txt{
     height: 400px;
+  }
+  .slides_a p{
+    font-size: 18px;
   }
 
 }
