@@ -17,7 +17,7 @@ body{
   background-image: url("../images/france/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques\,_Paris_août_2014_\(2\).jpg");
 }
 #Japon{
-  background-image: url("../images/japon/tzste.png");
+  background-image: url("https://c.wallhere.com/photos/42/51/Japanese_women_Kyoto_pagoda_Japan-1157749.jpg!d");
 }
 #Suede{
   background-image: url("https://c.wallhere.com/photos/44/c5/AI_art_cottage_island_Sweden_lake_white_simple_background_minimalism-2229404.jpg!d");
@@ -162,26 +162,49 @@ section iframe{
   width: 25%;
 }
 
-#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
+#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
   background-image: url("../images/argentine/chute\ d\'iguazu.jpg");
   background-size: cover;
   background-position: center center;
 }
-#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
+#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
   background-image: url("../images/argentine/le\ mole\ pablano.jpg");
   background-size: cover;
   background-position: center center;
 }
-#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
+#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
   background-image: url("../images/argentine/gauchos.jpg");
   background-size: cover;
   background-position: center center;
 }
-#diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
+#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
   background-image: url("../images/argentine/puerto\ madero.jpg");
   background-size: cover;
   background-position: center center;
 }
+
+/*Japon images*/
+#Japon .slides_a:nth-child(1){
+  background-image: url("../images/japon/parc_cerisier.png");
+  background-size: cover;
+  background-position: center center;
+}
+#Japon .slides_a:nth-child(2){
+  background-image: url("../images/japon/cours_cuisin.png");
+  background-size: cover;
+  background-position: center center;
+}
+#Japon .slides_a:nth-child(3){
+  background-image: url("../images/japon/musee_samourai.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#Japon .slides_a:nth-child(4){
+  background-image: url("../images/japon/shibuya.png");
+  background-size: cover;
+  background-position: center center;
+}
+
 .slides_text_a{
   display: flex;
   flex-direction: column;
@@ -282,15 +305,16 @@ section iframe{
     flex-direction: row;
     height: 100vh;
     align-items: center;
+    justify-content: space-evenly;
   }
   .Colonne_Intro{
     height: 62%;
     justify-content: space-evenly;
-
+    width: 40%;
   }
   .Image_intro{
     height: 175px;
-    width: 60%;
+    width: 65%;
   }
   article{
     display: flex;
