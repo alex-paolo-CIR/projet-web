@@ -377,7 +377,7 @@ html {
   }
 }
 /*
-@media screen and (height < 830px) and (orientation: landscape)  {
+@media screen and (witdh < 830px) and (orientation: landscape)  {
   .conteneur_pays{
     display: -webkit-box;
     display: -ms-flexbox;
