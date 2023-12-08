@@ -121,7 +121,6 @@ html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /* justify-content: space-between; */
   width: 50%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -138,6 +137,7 @@ html {
           flex-direction: row;
   width: 500px;
   height: 200px;
+  justify-content: center;
 }
 .categorie_presentation img{
   position: relative;
@@ -145,6 +145,7 @@ html {
   height: 40px;
   padding-top: 10px;
 }
+
 
 .titre_texte{
   width: 70%;
