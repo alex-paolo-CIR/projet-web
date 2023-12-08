@@ -221,11 +221,22 @@ section iframe{
 .slides_text_a a{
   font-size: 14px;
   color: rgb(199, 199, 211);
-  background-color: rgba(0, 0, 255, 0.295);
+  background-color: rgba(0, 0, 0, 0.281);
   text-decoration: none;
   width: 60px;
   border: solid 0px;
   border-radius: 0.5em;
+}
+.slides_text_a p{
+  background-color: rgba(0, 0, 0, 0.281);
+  width: 100%;
+  border: solid 0px;
+  border-radius: 0.5em;
+  margin-bottom: 1%;
+}
+.slides_text_a a:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
 }
 
 
