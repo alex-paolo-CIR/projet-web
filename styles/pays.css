@@ -6,7 +6,6 @@
 
 body{
   color: white;
-  
   background-size: cover;
   background-attachment: fixed;
   margin: 0px 10%;
@@ -68,6 +67,7 @@ body{
   height: 30px;
   border: solid 0px;
   border-radius: 1em;
+  
 }
 .Texte_intro{
   text-align: center;
