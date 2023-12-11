@@ -363,7 +363,7 @@ html {
   }
 
 }
-@media screen and (orientation: landscape) and (min-height = 830px) {
+@media screen and (orientation: landscape) {
   .conteneur_pays{
     display: -webkit-box;
     display: -ms-flexbox;
@@ -378,8 +378,8 @@ html {
     background-color: rgba(149, 149, 149, 0.4);
     border: solid black 0px;
     border-radius: 0.5em;
-    width: 800px;
-    height: 300px;
+    width: 700px;
+    height: 270px;
     border: 2px solid white;
     margin: 20px 0px;
   }
