@@ -141,7 +141,7 @@ section iframe{
 #diapo_a_txt {
   text-align: center;
   border:hidden;
-	width: 75%;
+	width: 100%;
 	margin: 0 auto;
 	height: 200px;
 	overflow: hidden;
@@ -365,6 +365,7 @@ section iframe{
   }
   #diapo_a_txt{
     height: 400px;
+    width: 75%;
   }
   .slides_a p{
     font-size: 18px;
