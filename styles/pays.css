@@ -123,7 +123,7 @@ section iframe{
   justify-content: space-around;
 }
 
-/*!diapo pour l'argentine*/
+/*!diapo pour donner envie*/
 
 #diaporama_envie{
   height: 50vh;
@@ -163,6 +163,7 @@ section iframe{
   width: 25%;
 }
 
+/*Agentine image*/
 #Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
   background-image: url("../images/argentine/chute\ d\'iguazu.jpg");
   background-size: cover;
