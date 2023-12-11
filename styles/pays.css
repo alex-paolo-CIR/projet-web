@@ -138,7 +138,7 @@ section iframe{
   margin: 10% 0%;
 }
 
-#diapo_a_txt {
+#diapo_txt {
   text-align: center;
   border:hidden;
 	width: 100%;
@@ -146,7 +146,7 @@ section iframe{
 	height: 200px;
 	overflow: hidden;
 }
-#diapo_a_txt .slides_diapos_a_txt {
+#diapo_txt .slides_diapos_txt {
   border: hidden;
 	height: 100%;
 	position: relative;
@@ -157,57 +157,57 @@ section iframe{
 	animation-direction: alternate;
 	animation-timing-function: linear;
 }
-#diapo_a_txt .slides_diapos_a_txt .slides_a{
+#diapo_txt .slides_diapos_txt .slides{
   float: left;
   height: 100%;
   width: 25%;
 }
 
 /*Agentine image*/
-#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(1){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(1){
   background-image: url("../images/argentine/chute\ d\'iguazu.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(2){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(2){
   background-image: url("../images/argentine/le\ mole\ pablano.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(3){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(3){
   background-image: url("../images/argentine/gauchos.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_a_txt .slides_diapos_a_txt .slides_a:nth-child(4){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(4){
   background-image: url("../images/argentine/puerto\ madero.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 /*Japon images*/
-#Japon .slides_a:nth-child(1){
+#Japon .slides:nth-child(1){
   background-image: url("../images/japon/parc_cerisier.png");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides_a:nth-child(2){
+#Japon .slides:nth-child(2){
   background-image: url("../images/japon/cours_cuisin.png");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides_a:nth-child(3){
+#Japon .slides:nth-child(3){
   background-image: url("../images/japon/musee_samourai.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides_a:nth-child(4){
+#Japon .slides:nth-child(4){
   background-image: url("../images/japon/shibuya.png");
   background-size: cover;
   background-position: center center;
 }
 
-.slides_text_a{
+.slides_text{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -216,10 +216,10 @@ section iframe{
   width: 80%;
   margin: 0% 10%;
 }
-.slides_text_a{
+.slides_text{
   font-size: 14px;
 }
-.slides_text_a a{
+.slides_text a{
   font-size: 14px;
   color: rgb(199, 199, 211);
   background-color: rgba(0, 0, 0, 0.281);
@@ -228,14 +228,14 @@ section iframe{
   border: solid 0px;
   border-radius: 0.5em;
 }
-.slides_text_a p{
+.slides_text p{
   background-color: rgba(0, 0, 0, 0.281);
   width: 100%;
   border: solid 0px;
   border-radius: 0.5em;
   margin-bottom: 1%;
 }
-.slides_text_a a:hover{
+.slides_text a:hover{
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
@@ -364,11 +364,11 @@ section iframe{
   #diaporama_envie{
     height: 100vh;
   }
-  #diapo_a_txt{
+  #diapo_txt{
     height: 400px;
     width: 75%;
   }
-  .slides_a p{
+  .slides p{
     font-size: 18px;
   }
 
