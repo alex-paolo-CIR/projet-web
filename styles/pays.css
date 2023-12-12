@@ -130,7 +130,7 @@ section iframe{
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-top: 30%;
+  /* padding-top: 30%; */
 }
 #diaporama_envie h2{
   margin-bottom: 5%;
