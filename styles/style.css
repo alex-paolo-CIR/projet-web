@@ -183,10 +183,10 @@ html {
   background-color: rgba(148, 147, 147, 0.7);
 }
 
-.conteneur_diapo{
+.conteneur_pres{
   width: 60%;
 }
-.image_diapo{
+.image_pres{
   margin: 5%;
   width: 90%;
   height: auto;
@@ -288,7 +288,7 @@ html {
   /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
  
-  .conteneur_diapo{
+  .conteneur_pres{
     width: 90%;
   }
   .conteneur_info_pays{
@@ -342,7 +342,7 @@ html {
     -ms-flex-pack:distribute;
         justify-content:space-around;
   }
-  .conteneur_diapo{
+  .conteneur_pres{
     width: 100%;
   }
   .conteneur_info_pays{
