@@ -10,6 +10,8 @@ body{
   background-attachment: fixed;
   margin: 0px 10%;
 }
+
+/* FOND DE PAYS */
 #Argentine {
   background-image: url("../images/argentine/Argentine.png");
 }
@@ -25,6 +27,8 @@ body{
 #Tunisie{
   background-image: url("../images/tunisie/acceuilTunisie.jpg");
 }
+
+
 
 .overlay {
   position: fixed;
@@ -179,6 +183,30 @@ section iframe{
   height: 100%;
   width: 25%;
 }
+
+
+/*Suede image*/
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(1){
+  background-image: url("../images/suede/suede-bois-nature.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(2){
+  background-image: url("../images/suede/suede-aurores.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(3){
+  background-image: url("TROUVER UNE IMAGE");
+  background-size: cover;
+  background-position: center center;
+}
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(4){
+  background-image: url("TROUVER UNE IMAGE");
+  background-size: cover;
+  background-position: center center;
+}
+
 
 /*Agentine image*/
 #Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(1){
