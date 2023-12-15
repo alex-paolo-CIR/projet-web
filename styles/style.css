@@ -160,6 +160,11 @@ html {
 
 /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
 
+#ancre_pays{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .conteneur_pays{
   display: -webkit-box;
   display: -ms-flexbox;
