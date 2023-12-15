@@ -133,6 +133,10 @@ section iframe{
   justify-content: space-around;
 }
 
+#texte_destination h3{
+  text-decoration: underline;
+}
+
 /*!diapo pour donner envie*/
 
 #diaporama_envie{
