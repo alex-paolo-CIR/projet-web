@@ -395,12 +395,15 @@ section iframe{
     width: 50%;
   }
   .destination{
-    margin: 0;
+    margin: 0px;
+    height: 175px;
   }
   section iframe{
     height: 150px;
   }
-
+  .destination a{
+    height: 25px;
+  }
   #texte_destination{
     height: 100%;
     width: 40%;
@@ -410,7 +413,7 @@ section iframe{
     text-align: center;
   }
   #texte_destination div{
-    height: 150px;
+    height: 175px;
   }
   #diaporama_envie{
     height: 100vh;
