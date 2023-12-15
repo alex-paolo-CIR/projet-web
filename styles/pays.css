@@ -55,7 +55,7 @@ body{
   flex-direction: column;
   height: 50%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 5% 0%;
 }
 .Titre_intro{
@@ -366,7 +366,7 @@ section iframe{
   } */
   .Colonne_Intro{
     height: 65%;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 40%;
   }
   .Image_intro{
