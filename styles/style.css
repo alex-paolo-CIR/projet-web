@@ -265,56 +265,41 @@ html {
 
 /*petit menu des familles */
 
-.dropdown {
+.menu {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
   position: fixed;
   top: 10px;
   left: 10px;
-  display: inline-block;
+  z-index: 999;
 }
 
-.dropbtn {
-  background-color: #ff6f0023;
-  color: #000;
+.dropdown {
+  position: fixed;
+  top: 15px;
+  left: -1000px; /* position hors de l'écran */
+  background: #868686;
+  border-radius: 10px;
   padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  border-radius: 50%;
-  width: 50px;
+  transition: left 0.3s ease;
+  z-index: 998;
 }
 
-.dropdown-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  left: 100%; /* Changez cette valeur pour régler la position à droite */
-  top: 0; /* Ajoutez cette ligne pour aligner le haut du menu déroulant avec le bouton */
-}
-
-
-.dropdown-content a {
-  color: #000;
-  padding: 12px 16px;
+.dropdown a {
+  display:inline-flex;
   text-decoration: none;
-  display: block
+  color: white;
+}
+.menu:hover + .dropdown {
+  left: 60px;
 }
 
-.dropdown-content a:hover {
-  background-color: #f1f1f1;
+.dropdown:hover {
+  left: 60px;
 }
-
-.dropdown:hover .dropdown-content {
-  max-height: 200px; /* ajustez la hauteur maximale selon cque tu veux */
-}
-
-
-
-
-
 
 
 /*responsive pour grade tablettes/pc*/
