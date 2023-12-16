@@ -263,6 +263,59 @@ html {
   z-index: 999;
 }
 
+/*petit menu des familles */
+
+.dropdown {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #ff6f0023;
+  color: #000;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+}
+
+.dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  left: 100%; /* Changez cette valeur pour régler la position à droite */
+  top: 0; /* Ajoutez cette ligne pour aligner le haut du menu déroulant avec le bouton */
+}
+
+
+.dropdown-content a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  max-height: 200px; /* ajustez la hauteur maximale selon cque tu veux */
+}
+
+
+
+
+
+
 
 /*responsive pour grade tablettes/pc*/
 
