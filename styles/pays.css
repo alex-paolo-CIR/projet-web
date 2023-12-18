@@ -197,12 +197,12 @@ section iframe{
   background-position: center center;
 }
 #Suede #diapo_txt .slides_diapos_txt .slides:nth-child(3){
-  background-image: url("TROUVER UNE IMAGE");
+  background-image: url("../images/suede/saumon_gravd_lax.jpg");
   background-size: cover;
   background-position: center center;
 }
 #Suede #diapo_txt .slides_diapos_txt .slides:nth-child(4){
-  background-image: url("TROUVER UNE IMAGE");
+  background-image: url("../images/suede/Kanelbullar.jpg");
   background-size: cover;
   background-position: center center;
 }
