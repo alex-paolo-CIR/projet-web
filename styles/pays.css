@@ -273,6 +273,27 @@ section iframe{
   background-size: cover;
   background-position: center center;
 }
+/*diapo tunisie*/
+#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(1){
+  background-image: url("image 1 diapo");
+  background-size: cover;
+  background-position: center center;
+}
+#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(2){
+  background-image: url("image 2 diapo");
+  background-size: cover;
+  background-position: center center;
+}
+#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(3){
+  background-image: url("image 3 diapo");
+  background-size: cover;
+  background-position: center center;
+}
+#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(4){
+  background-image: url("image 4 diapo");
+  background-size: cover;
+  background-position: center center;
+}
 
 .slides_text{
   display: flex;
