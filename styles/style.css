@@ -263,6 +263,12 @@ html {
   z-index: 999;
 }
 
+footer :hover{
+  background-color: rgb(255, 119, 0);
+  transition-delay: 0.3s;
+  transition: background-color 0.5s ease-in-out;
+}
+
 /*petit menu des familles */
 
 .menu {
@@ -304,6 +310,7 @@ html {
 
 .dropdown a:hover {
   color: rgb(255, 119, 0);
+  transition: color 1s ease;
   text-decoration: underline;
 }
 

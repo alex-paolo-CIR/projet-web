@@ -376,6 +376,12 @@ section iframe{
   z-index: 999;
 }
 
+footer :hover{
+  background-color: rgb(255, 119, 0);
+  transition-delay: 0.3s;
+  transition: background-color 0.5s ease-in-out;
+}
+
 /*Bouton pour revenir a la page d'accueil.*/
 
 .home {
