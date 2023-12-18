@@ -401,7 +401,7 @@ section iframe{
   .Titre_intro{
     width: 50%;
     padding-top: 10px;
-    height: 30px;
+    min-height: 30px;
   }
   .Titre_infos{
     /* padding-bottom: 4px; */
@@ -451,7 +451,9 @@ section iframe{
     margin: 0px;
     height: 175px;
     position: relative;
+    width: 100%;
   }
+  /*permet de mettre l'iframe en bas à droite*/
   section iframe{
     height: 75px;
     width: 150px;
@@ -484,13 +486,15 @@ section iframe{
   .slides p{
     font-size: 18px;
   }
+  /*affiche l'image de fond*/
   .image_a_cacher{
     display: block;
-    width: 512px;
+    width: 500px;
     height: 175px;
     position: absolute;
     top: 0;
     z-index: 1;
+    width: 100%;
   }
 
 }
