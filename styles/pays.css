@@ -16,7 +16,7 @@ body{
   background-image: url("../images/argentine/Argentine.png");
 }
 #France{
-  background-image: url("../images/france/La_Tour_Eiffel_vue_de_la_Tour_Saint-Jacques\,_Paris_août_2014_\(2\).jpg");
+  background-image: url("../images/france/La_Tour_Eiffel.jpg");
 }
 #Japon{
   background-image: url("../images/japon/japonPRES.jpg");
@@ -171,7 +171,7 @@ section iframe{
 	height: 100%;
 	position: relative;
 	width: 400%;
-	animation-name: diaporama_a;
+	animation-name: diaporama;
 	animation-duration: 12s;
 	animation-iteration-count: infinite;
 	animation-direction: alternate;
@@ -308,7 +308,7 @@ section iframe{
 }
 
 
-@-webkit-keyframes diaporama_a {
+@-webkit-keyframes diaporama {
   from, 10% {
     right: 0%;
   }
@@ -322,7 +322,7 @@ section iframe{
     right: 300%;
   }
 }
-@keyframes diaporama_a {
+@keyframes diaporama {
   from, 10% {
     right: 0%;
   }
