@@ -95,7 +95,7 @@ body{
   border-radius: 0.5em;
 }
 section{
-  height: 100vh;
+  height: 60vh;
 }
 .conteneur_destination{
   width: 100%;
@@ -139,6 +139,7 @@ section iframe{
 
 #texte_destination h3{
   text-decoration: underline;
+  text-align: center;
 }
 
 /*!diapo pour donner envie*/
