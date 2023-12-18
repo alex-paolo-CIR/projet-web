@@ -97,59 +97,9 @@ body{
 section{
   height: 60vh;
 }
-.conteneur_destination{
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.destination{
-  width: 100%;
-  margin: 5% 0%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-section iframe{
-  width: 100%;
-  height: 100px;
-}
-.conteneur_destination a{
-  display: block;
-  text-align: center;
-  width: 230px;
-  border: solid 0px;
-  border-radius: 0.25em;
-  text-decoration: none;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.274);
-}
-.conteneur_destination a:active{
-  background-color: rgba(128, 128, 128, 0.274);
-  font-size: 17px;
-  border: solid 0px;
-  border-radius: 0.25em;
-}
-#texte_destination{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-}
 
-#texte_destination h3{
-  text-decoration: underline;
-  text-align: center;
-}
-.image_a_cacher{
-  display: none;
-}
-#texte_destination div p{
-  text-align: center;
-  width: 100%;
-}
-
-/*!diapo pour donner envie*/
+/*!diapo pour donner envie ---------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------*/
 
 #diaporama_envie{
   height: 40vh;
@@ -365,7 +315,65 @@ section iframe{
     right: 300%;
   }
 }
-/*!fin diapo argntine*/
+/*!fin diapo*/
+
+
+/*Les Destination ---------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------*/
+
+.conteneur_destination{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.destination{
+  width: 100%;
+  margin: 5% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section iframe{
+  width: 100%;
+  height: 100px;
+}
+.conteneur_destination a{
+  display: block;
+  text-align: center;
+  width: 230px;
+  border: solid 0px;
+  border-radius: 0.25em;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.274);
+}
+.conteneur_destination a:active{
+  background-color: rgba(128, 128, 128, 0.274);
+  font-size: 17px;
+  border: solid 0px;
+  border-radius: 0.25em;
+}
+#texte_destination{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#texte_destination h3{
+  text-decoration: underline;
+  text-align: center;
+}
+.image_a_cacher{
+  display: none;
+}
+#texte_destination div p{
+  text-align: center;
+  width: 100%;
+}
+
+
 /*Bouton pour revenir en haut de la page.*/
 
 .top {
@@ -401,7 +409,8 @@ footer :hover{
 }
 
 
-/*responsive*/
+/*responsive -------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------*/
 
 @media screen and (min-width : 400px) {
 
