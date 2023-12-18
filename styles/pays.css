@@ -482,6 +482,7 @@ footer :hover{
     bottom: 0px;
   }
   .destination a{
+    display: none;
     height: 25px;
   }
   #texte_destination{
@@ -494,6 +495,7 @@ footer :hover{
   }
   #texte_destination div{
     height: 175px;
+    padding: 0px 5%;
   }
   #diaporama_envie{
     height: 100vh;
@@ -515,5 +517,81 @@ footer :hover{
     z-index: 1;
     width: 100%;
   }
+
+}
+@media screen and (orientation: landscape){
+  .presentation{
+    flex-direction: row;
+    height: 600px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+  }
+  /* #diaporama_envie{
+    padding-top: 0%;
+  } */
+  .Colonne_Intro{
+    height: 65%;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .Image_intro{
+    height: 175px;
+    width: 65%;
+  }
+
+  article{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    justify-content: space-between;
+  }
+
+  .conteneur_destination{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+  }
+  .destination{
+    margin: 0px;
+    height: 175px;
+    width: 100%;
+  }
+  /*permet de mettre l'iframe en bas à droite*/
+  section iframe{
+    height: 100px;
+    padding-top: 10%;
+  }
+  .destination a{
+    display: none;
+    height: 25px;
+  }
+  #texte_destination{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+  }
+  #texte_destination div{
+    height: 175px;
+    padding: 0px 5%;
+  }
+  #diaporama_envie{
+    height: 100vh;
+  }
+  #diapo_txt{
+    height: 400px;
+    width: 75%;
+  }
+  .slides p{
+    font-size: 18px;
+  }
+  
 
 }
