@@ -290,7 +290,7 @@ footer :hover{
   background: #868686;
   border-radius: 10px;
   padding: 10px;
-  transition: left 0.3s ease, transform 0.5s ease;
+  transition: left 0.3s ease;
   z-index: 998;
   font-size:90%;
 }
@@ -306,17 +306,30 @@ footer :hover{
 
 .menu:hover {
   transition: background 1s ease-in-out;
+  animation: rota 1s;
   transform: rotate(90deg);
+}
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg)
+  }
 }
 
 .dropdown:hover {
-  left: 60px;;
+  left: 60px;
 }
 
 .dropdown a:hover {
   color: rgb(255, 119, 0);
   transition: color 1s ease;
   text-decoration: underline;
+}
+.menu img{
+  width: 25px;
+  height: 25px;
 }
 
 
