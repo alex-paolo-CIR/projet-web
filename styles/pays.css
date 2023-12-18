@@ -232,22 +232,22 @@ section{
   background-position: center center;
 }
 /*diapo tunisie*/
-#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(1){
+#Tunisie .slides:nth-child(1){
   background-image: url("../images/tunisie/local-and-imported-fruits.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(2){
+#Tunisie .slides:nth-child(2){
   background-image: url("../images/tunisie/tajine.png");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(3){
+#Tunisie .slides:nth-child(3){
   background-image: url("../images/tunisie/teatro-municipal-de-tunis.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie #diapo_txt .slides_diapos_txt .slides:nth-child(4){
+#Tunisie .slides:nth-child(4){
   background-image: url("../images/tunisie/baklava.jpg");
   background-size: cover;
   background-position: center center;
