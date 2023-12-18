@@ -286,6 +286,7 @@ html {
   padding: 10px;
   transition: left 0.3s ease;
   z-index: 998;
+  font-size:90%;
 }
 
 .dropdown a {
