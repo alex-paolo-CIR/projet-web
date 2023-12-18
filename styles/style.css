@@ -304,8 +304,13 @@ footer :hover{
   left: 60px;
 }
 
+.menu:hover {
+  background: rgb(255, 119, 0);
+  transition: background 1s ease-in-out;
+}
+
 .dropdown:hover {
-  left: 60px;
+  left: 60px;;
 }
 
 .dropdown a:hover {
