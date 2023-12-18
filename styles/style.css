@@ -304,6 +304,7 @@ html {
 
 .dropdown a:hover {
   color: rgb(255, 119, 0);
+  transition: color 1s ease;
   text-decoration: underline;
 }
 
