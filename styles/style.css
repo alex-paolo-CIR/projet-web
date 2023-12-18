@@ -292,6 +292,7 @@ footer :hover{
   padding: 10px;
   transition: left 0.3s ease;
   z-index: 998;
+  font-size:90%;
 }
 
 .dropdown a {
@@ -309,6 +310,7 @@ footer :hover{
 
 .dropdown a:hover {
   color: rgb(255, 119, 0);
+  transition: color 1s ease;
   text-decoration: underline;
 }
 
@@ -493,5 +495,4 @@ footer :hover{
     font-size: 18px;
     height: 0px;
   }
-  
 }  

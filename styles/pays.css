@@ -95,7 +95,7 @@ body{
   border-radius: 0.5em;
 }
 section{
-  height: 100vh;
+  height: 60vh;
 }
 .conteneur_destination{
   width: 100%;
@@ -139,6 +139,10 @@ section iframe{
 
 #texte_destination h3{
   text-decoration: underline;
+  text-align: center;
+}
+.image_a_cacher{
+  display: none;
 }
 
 /*!diapo pour donner envie*/
@@ -452,9 +456,15 @@ footer :hover{
   .destination{
     margin: 0px;
     height: 175px;
+    position: relative;
   }
   section iframe{
-    height: 150px;
+    height: 75px;
+    width: 150px;
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
   }
   .destination a{
     height: 25px;
@@ -479,6 +489,14 @@ footer :hover{
   }
   .slides p{
     font-size: 18px;
+  }
+  .image_a_cacher{
+    display: block;
+    width: 512px;
+    height: 175px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
   }
 
 }
