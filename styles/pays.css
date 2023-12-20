@@ -221,12 +221,12 @@ section{
   background-position: center center;
 }
 #France .slides:nth-child(3){
-  background-image: url("../images/france/pays/alpes.jpg");
+  background-image: url("../images/france/Louvre\ diapo.jpg");
   background-size: cover;
   background-position: center center;
 }
 #France .slides:nth-child(4){
-  background-image: url("../images/france/pays/falaises.jpg");
+  background-image: url("../images/france/plateau_bourgogne_diapo.jpg");
   background-size: cover;
   background-position: center center;
 }
