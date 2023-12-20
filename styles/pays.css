@@ -116,12 +116,11 @@ section{
 
 #diapo_txt {
   text-align: center;
-  border:hidden;
 	width: 100%;
 	margin: 0 auto;
 	height: 200px;
 	overflow: hidden;
-  border: solid 0px;
+  border: solid 2px white;
   border-radius: 0.5em;
 }
 #diapo_txt .slides_diapos_txt {
@@ -217,7 +216,7 @@ section{
   background-position: center center;
 }
 #France .slides:nth-child(2){
-  background-image: url("../images/france/pays/tour-eiffel.jpg");
+  background-image: url("../images/france/MACARON\ DIAPO.jpeg");
   background-size: cover;
   background-position: center center;
 }
