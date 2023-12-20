@@ -15,6 +15,73 @@ body{
   margin: 0px 10%;
 }
 
+
+/*petit menu des familles */
+
+.menu {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 2em;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+
+.dropdown {
+  position: fixed;
+  top: 15px;
+  left: -1000px; /* position hors de l'écran */
+  background: #868686;
+  border-radius: 10px;
+  padding: 10px;
+  transition: left 0.3s ease;
+  z-index: 998;
+  font-size:90%;
+}
+
+.dropdown a {
+  display:inline-flex;
+  text-decoration: none;
+  color: white;
+}
+.menu:hover + .dropdown {
+  left: 60px;
+}
+
+.menu:hover {
+  transition: background 1s ease-in-out;
+  animation: rota 1s;
+  transform: rotate(90deg);
+}
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg)
+  }
+}
+
+.dropdown:hover {
+  left: 60px;
+}
+
+.dropdown a:hover {
+  color: rgb(255, 119, 0);
+  transition: color 1s ease;
+  text-decoration: underline;
+}
+.menu img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+
 /* FOND DE PAYS */
 #Argentine {
   background-image: url("../images/argentine/Argentine.png");
