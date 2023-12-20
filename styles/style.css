@@ -328,8 +328,9 @@ footer :hover{
   text-decoration: underline;
 }
 .menu img{
-  width: 25px;
-  height: 25px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------------------------------------------------------------------------------------- */
