@@ -336,6 +336,102 @@ footer :hover{
 /* ---------------------------------------------------------------------------------------- */
 
 
+.footer_content{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 300px;
+  background-color: rgba(33, 47, 126, 0.215);
+  align-items: center;
+  border-radius: 7em;
+  margin-top: 20vh;
+}
+.footer_content:hover{
+  background-color: rgba(20, 36, 124, 0.347);
+}
+.footer_section{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about{
+  justify-content: space-around;
+}
+.footer_section p{
+  width: 80%;
+  text-align: center;
+}
+.socials{
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.socials a{
+  display: block;
+  width: 25%;
+}
+.socials a img{
+  text-decoration: none;
+  width: 60%;
+  margin: 0% 20%;
+
+}
+.place_image{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.place_image img{
+  width: 50%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  justify-content: space-around;
+  align-items: center
+}
+.contact_form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.contact_form input{
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.contact_form textarea{
+  width: 80%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.contact_form button{
+  width: 30%;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+.contact_form button:hover{
+  background-color: rgba(0, 0, 0, 0.76);
+  cursor: pointer;
+}
+
+.footer_bottom{
+  text-align: center;
+}
 /* ---------------------------------------------------------------------------------------- */
 
 
