@@ -573,7 +573,7 @@ footer :hover{
   }
   .Image_intro{
     height: 175px;
-    width: 200px;
+    max-width: 275px;
   }
 
   article{
@@ -620,7 +620,6 @@ footer :hover{
   }
   #texte_destination div{
     height: 175px;
-    padding: 0px 5%;
   }
   #diaporama_envie{
     height: 100vh;
