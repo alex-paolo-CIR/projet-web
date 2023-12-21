@@ -396,6 +396,8 @@ section{
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
+  justify-content: space-evenly;
 }
 .destination{
   width: 100%;
@@ -427,6 +429,7 @@ section iframe{
 #texte_destination{
   display: flex;
   width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-around;
 }
@@ -494,7 +497,7 @@ footer :hover{
   margin: 5% 0%;
   box-shadow: 0px 0px 70px -20px rgb(0, 0, 0);
   height: auto;
-  width: auto;
+  width: 300px;
   margin-bottom: 100%;
 }
 
@@ -547,6 +550,9 @@ footer :hover{
     width: 330px;
     text-transform: uppercase;
   }
+  #texte_destination{
+    height: 80vh;
+  }
 }
 
 
@@ -576,7 +582,6 @@ footer :hover{
     display: flex;
     flex-direction: row;
     height: 100vh;
-    justify-content: space-between;
   }
 
   .conteneur_destination{
