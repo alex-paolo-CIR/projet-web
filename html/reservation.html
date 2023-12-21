@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta meta name="viewport" content="width=device-width, user-scalable = no" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="icon" href="../images/divers/logo.png">
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!--lien pour les icones-->
+    <title>Réservation</title>
+  </head>
+
+  <body id="Accueil">
+    <div class="overlay"></div>
+    <!-- OVERLAY POUR ASSOMBRIR NOTRE BACKGROUND -->
+    <div style="position: relative; z-index: 2">
+      <!--cette div met tout le code au dessus de l'overlay pour que ça ne sois pas grisatre-->
+
+
+      <style>
+        /* Ajoutez ici votre propre style pour rendre la page plus attrayante */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        main {
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.135);
+            border: 2px solid white;
+        }
+
+        h1 {
+            color: #f7f7f7;
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            /* space between all inputs */
+            justify-content: space-between;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select.pays {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="date"] {
+          margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .homee {
+          text-decoration: none;
+  padding: 14px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 2em;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  z-index: 999;
+        }
+
+        @media screen and (max-width: 500px) {
+            h1 {
+                margin-top: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+      <h1 style="
+            display: flex; 
+            align-items: center; 
+            text-align: center;
+            justify-content: center;
+            text-decoration: underline;
+            
+            ">Réservation de votre voyage</h1>
+
+      <form action="reservation.php" method="post">
+          <label for="nom">Nom</label>
+          <input type="text" name="nom" id="nom" required>
+
+          <label for="prenom">Prénom</label>
+          <input type="text" name="prenom" id="prenom" required>
+
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" required>
+
+          <label for="pays">Pays</label>
+          <select name="pays" id="pays" required>
+              <option value="">Choisissez un pays</option>
+              <option value="argentine">Argentine</option>  
+              <option value="france">France</option>
+              <option value="japon">Japon</option>
+              <option value="suede">Suède</option>
+              <option value="tunisie">Tunisie</option>
+          </select>
+
+          <br>
+
+          <label for="date">Date de départ</label>
+          <input type="date" name="date" id="date" required>
+
+          <!-- duree du séjour mais ne peux pas être négatif (-1) -->
+          <label for="duree">Durée du séjour</label>
+          <input type="number" name="duree" id="duree" min="1" required >
+
+          <br>
+
+          <!-- nombre de voyageur avec enfant et adultes en html uniquement -->
+          <label for="nbVoyageurs">Nombre de voyageurs</label>
+          <input type="number" name="nbVoyageurs" id="nbVoyageurs" min="1" required>
+          <!-- <fieldset>
+            <legend>Nombre d'enfants</legend>
+            <input type="number" name="nbEnfants" id="nbEnfants" min="0" required>
+
+            <legend>Nombre d'adultes</legend>
+            <input type="number" name="nbAdultes" id="nbAdultes" min="0" required>
+
+
+
+            
+          </fieldset> -->
+
+          <br>
+          <!-- nombre de bagage mais en "select" comme pour les pays -->
+          <label for="nbBagages">Nombre de bagages</label>
+          <select name="nbBagages" id="nbBagages" required>
+              <option value="">Choisissez un nombre de bagages</option>
+              <option value="1">1 bagage</option>  
+              <option value="2">2 bagages</option>
+              <option value="3">3 bagages</option>
+              <option value="4">4 bagages</option>
+              <option value="5">5 bagages</option>
+          </select>
+
+
+
+          
+          <input type="submit" value="Réserver">
+
+          <a class="homee" id="backHomee" href="../index.html#ancre_pays"
+          ><img
+            src="../images/divers/backHome.png"
+        /></a>
+      </form>
+
+
+
+
+
+
+      <a class="menu"
+      ><img
+        src="../images/divers/menu-principal.png"
+    /></a>
+
+    <nav class="dropdown">
+      <div class="dropdown-content">
+        <a href="../html/france.html">FRANCE</a>
+        <a href="../html/argentine.html">ARGENTINE</a>
+        <a href="../html/japon.html">JAPON</a>
+        <a href="../html/suede.html">SUEDE</a>
+        <a href="../html/tunisie.html">TUNISIE</a>
+      </div>
+    </nav>
+
+    <!-- faire un de bas de page sur un fond noir transparent -->
+      
+    </div> <!--cette div met tout le code au dessus de l'overlay pour que ça ne sois pas grisatre-->
+    <footer>
+    </footer>
+  </body>
+</html> 
