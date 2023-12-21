@@ -550,7 +550,7 @@ footer :hover{
     width: 330px;
     text-transform: uppercase;
   }
-  #texte_destination{
+  .conteneur_destination{
     height: 70vh;
   }
 }
@@ -573,7 +573,7 @@ footer :hover{
   }
   .Image_intro{
     height: 175px;
-    width: 65%;
+    width: 200px;
   }
 
   article{
