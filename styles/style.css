@@ -160,6 +160,11 @@ label {
   font-weight: bold;
 }
 
+.genre{
+  display:inline-flex;
+  margin-bottom: 10px;
+}
+
 input[type="text"],
 input[type="email"],
 select.pays {
