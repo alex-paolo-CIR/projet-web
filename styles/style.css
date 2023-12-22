@@ -24,6 +24,51 @@ html {
   z-index: 1; 
 } 
 
+/*  */
+
+/* css pour la section .reserve */
+.reserve{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(149, 149, 149, 0.4);
+  border: 2px solid white;
+  border-radius: 1em;
+  padding: 2% 0%;
+  margin: 5% 0%;
+  box-shadow: 0px 0px 70px -20px rgb(0, 0, 0);
+  height: auto;
+  width: 300px;
+  margin-bottom: auto;
+}
+
+.reserve:hover{
+  background-color: rgba(148, 147, 147, 0.7);
+}
+
+#btn_resa{
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+#btn_resa:hover{
+  background-color: rgb(255, 119, 0);
+  color:#fff;
+  transition-delay: 0.3s;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/*  */
 
 /*Code qui s'occupe de la mise en page pour l'écran quand on arrive sur le site*/
 
