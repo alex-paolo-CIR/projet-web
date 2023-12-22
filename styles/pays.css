@@ -661,11 +661,9 @@ footer :hover {
   }
 
   article {
-    padding-top: 5%;
-    padding-bottom: 5%;
     display: flex;
     flex-direction: row;
-    height: 500px;
+    height: 600px;
     justify-content: space-between;
   }
 
@@ -681,14 +679,12 @@ footer :hover {
     height: 175px;
     width: 100%;
   }
-  /*permet de mettre l'iframe en bas à droite*/
   section iframe {
     height: 100px;
     padding-top: 10%;
   }
   .destination a {
     display: none;
-    height: 25px;
   }
   #texte_destination {
     height: 100%;
@@ -711,5 +707,10 @@ footer :hover {
   }
   .slides p {
     font-size: 18px;
+  }
+  .reserve {
+    width: 40%;
+    margin: 100px auto;
+    height: 100px;
   }
 }
