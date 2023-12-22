@@ -8,13 +8,12 @@ html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   color: white;
   background-size: cover;
   background-attachment: fixed;
   margin: 0px 10%;
 }
-
 
 /*petit menu des familles */
 
@@ -39,11 +38,11 @@ body{
   padding: 10px;
   transition: left 0.3s ease;
   z-index: 998;
-  font-size:90%;
+  font-size: 90%;
 }
 
 .dropdown a {
-  display:inline-flex;
+  display: inline-flex;
   text-decoration: none;
   color: white;
 }
@@ -61,7 +60,7 @@ body{
     transform: rotate(0deg);
   }
   100% {
-    transform: rotate(90deg)
+    transform: rotate(90deg);
   }
 }
 
@@ -74,7 +73,7 @@ body{
   transition: color 1s ease;
   text-decoration: underline;
 }
-.menu img{
+.menu img {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -86,20 +85,18 @@ body{
 #Argentine {
   background-image: url("../images/argentine/Argentine.png");
 }
-#France{
+#France {
   background-image: url("../images/france/La_Tour_Eiffel.jpg");
 }
-#Japon{
+#Japon {
   background-image: url("../images/japon/japonPRES.jpg");
 }
-#Suede{
+#Suede {
   background-image: url("../images/suede/suedePres.jpg");
 }
-#Tunisie{
+#Tunisie {
   background-image: url("../images/tunisie/acceuilTunisie.jpg");
 }
-
-
 
 .overlay {
   position: fixed;
@@ -124,7 +121,7 @@ body{
   justify-content: center;
 }
 
-.Colonne_Intro{
+.Colonne_Intro {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -133,7 +130,7 @@ body{
   justify-content: space-evenly;
   padding: 5% 0%;
 }
-.Titre_intro{
+.Titre_intro {
   text-align: center;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.342);
@@ -143,7 +140,7 @@ body{
   border: solid 0px;
   border-radius: 1em;
 }
-.Titre_infos{
+.Titre_infos {
   text-align: center;
   font-size: 20px;
   background-color: rgba(255, 255, 255, 0.342);
@@ -154,176 +151,173 @@ body{
   border-radius: 1em;
   margin: 10px auto;
 }
-.Texte_intro{
+.Texte_intro {
   text-align: center;
   width: 90%;
   font-size: 13px;
   padding-bottom: 7px;
 }
-.Image_intro{
+.Image_intro {
   width: 65%;
   border: solid 0px;
   border-radius: 0.5em;
 }
-section{
+section {
   height: 60vh;
 }
 
 /*!diapo pour donner envie ---------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------*/
 
-#diaporama_envie{
+#diaporama_envie {
   height: 40vh;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
-#diaporama_envie h2{
+#diaporama_envie h2 {
   margin-bottom: 2%;
 }
-.diapo_container{
+.diapo_container {
   margin: 10% 0%;
 }
 
 #diapo_txt {
   text-align: center;
-	width: 100%;
-	margin: 0 auto;
-	height: 200px;
-	overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  height: 200px;
+  overflow: hidden;
   border: solid 2px white;
   border-radius: 0.5em;
 }
 #diapo_txt .slides_diapos_txt {
   border: hidden;
-	height: 100%;
-	position: relative;
-	width: 400%;
-	animation-name: diaporama;
-	animation-duration: 12s;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-timing-function: linear;
-  
+  height: 100%;
+  position: relative;
+  width: 400%;
+  animation-name: diaporama;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
 }
-#diapo_txt .slides_diapos_txt .slides{
+#diapo_txt .slides_diapos_txt .slides {
   float: left;
   height: 100%;
   width: 25%;
 }
 
-
 /*Suede image*/
-#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(1){
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(1) {
   background-image: url("../images/suede/suede-bois-nature.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(2){
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(2) {
   background-image: url("../images/suede/suede-aurores.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(3){
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(3) {
   background-image: url("../images/suede/saumon_gravd_lax.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(4){
+#Suede #diapo_txt .slides_diapos_txt .slides:nth-child(4) {
   background-image: url("../images/suede/Kanelbullar.jpg");
   background-size: cover;
   background-position: center center;
 }
 
-
 /*Agentine image*/
-#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(1){
-  background-image: url("../images/argentine/chute\ d\'iguazu.jpg");
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(1) {
+  background-image: url("../images/argentine/chute\ d'iguazu.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(2){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(2) {
   background-image: url("../images/argentine/le\ mole\ pablano.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(3){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(3) {
   background-image: url("../images/argentine/gauchos.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(4){
+#Argentine #diapo_txt .slides_diapos_txt .slides:nth-child(4) {
   background-image: url("../images/argentine/puerto\ madero.jpg");
   background-size: cover;
   background-position: center center;
 }
 
 /*Japon images*/
-#Japon .slides:nth-child(1){
+#Japon .slides:nth-child(1) {
   background-image: url("../images/japon/parc_cerisier.png");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides:nth-child(2){
+#Japon .slides:nth-child(2) {
   background-image: url("../images/japon/cours_cuisin.png");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides:nth-child(3){
+#Japon .slides:nth-child(3) {
   background-image: url("../images/japon/musee_samourai.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Japon .slides:nth-child(4){
+#Japon .slides:nth-child(4) {
   background-image: url("../images/japon/shibuya.png");
   background-size: cover;
   background-position: center center;
 }
 
 /*France images*/
-#France .slides:nth-child(1){
+#France .slides:nth-child(1) {
   background-image: url("../images/france/pays/mont\ saint\ michel.png");
   background-size: cover;
   background-position: center center;
 }
-#France .slides:nth-child(2){
+#France .slides:nth-child(2) {
   background-image: url("../images/france/MACARON\ DIAPO.jpeg");
   background-size: cover;
   background-position: center center;
 }
-#France .slides:nth-child(3){
+#France .slides:nth-child(3) {
   background-image: url("../images/france/Louvre\ diapo.jpg");
   background-size: cover;
   background-position: center center;
 }
-#France .slides:nth-child(4){
+#France .slides:nth-child(4) {
   background-image: url("../images/france/plateau_bourgogne_diapo.jpg");
   background-size: cover;
   background-position: center center;
 }
 /*diapo tunisie*/
-#Tunisie .slides:nth-child(1){
+#Tunisie .slides:nth-child(1) {
   background-image: url("../images/tunisie/local-and-imported-fruits.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie .slides:nth-child(2){
+#Tunisie .slides:nth-child(2) {
   background-image: url("../images/tunisie/tajine.png");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie .slides:nth-child(3){
+#Tunisie .slides:nth-child(3) {
   background-image: url("../images/tunisie/teatro-municipal-de-tunis.jpg");
   background-size: cover;
   background-position: center center;
 }
-#Tunisie .slides:nth-child(4){
+#Tunisie .slides:nth-child(4) {
   background-image: url("../images/tunisie/baklava.jpg");
   background-size: cover;
   background-position: center center;
 }
 
-.slides_text{
+.slides_text {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -332,10 +326,10 @@ section{
   width: 80%;
   margin: 0% 10%;
 }
-.slides_text{
+.slides_text {
   font-size: 14px;
 }
-.slides_text a{
+.slides_text a {
   font-size: 14px;
   color: rgb(199, 199, 211);
   background-color: rgba(0, 0, 0, 0.281);
@@ -344,54 +338,60 @@ section{
   border: solid 0px;
   border-radius: 0.5em;
 }
-.slides_text p{
+.slides_text p {
   background-color: rgba(0, 0, 0, 0.281);
   width: 100%;
   border: solid 0px;
   border-radius: 0.5em;
   margin-bottom: 1%;
 }
-.slides_text a:hover{
+.slides_text a:hover {
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
 
-
 @-webkit-keyframes diaporama {
-  from, 10% {
+  from,
+  10% {
     right: 0%;
   }
-  30%, 40% {
+  30%,
+  40% {
     right: 100%;
   }
-  60%, 70% {
+  60%,
+  70% {
     right: 200%;
   }
-  90%, to {
+  90%,
+  to {
     right: 300%;
   }
 }
 @keyframes diaporama {
-  from, 10% {
+  from,
+  10% {
     right: 0%;
   }
-  30%, 40% {
+  30%,
+  40% {
     right: 100%;
   }
-  60%, 70% {
+  60%,
+  70% {
     right: 200%;
   }
-  90%, to {
+  90%,
+  to {
     right: 300%;
   }
 }
 /*!fin diapo*/
 
-
 /*Les Destination ---------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------*/
 
-.conteneur_destination{
+.conteneur_destination {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -399,18 +399,18 @@ section{
   height: 100vh;
   justify-content: space-evenly;
 }
-.destination{
+.destination {
   width: 100%;
   margin: 5% 0%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-section iframe{
+section iframe {
   width: 100%;
   height: 100px;
 }
-.conteneur_destination a{
+.conteneur_destination a {
   display: block;
   text-align: center;
   width: 230px;
@@ -420,13 +420,13 @@ section iframe{
   color: white;
   background-color: rgba(255, 255, 255, 0.274);
 }
-.conteneur_destination a:active{
+.conteneur_destination a:active {
   background-color: rgba(128, 128, 128, 0.274);
   font-size: 17px;
   border: solid 0px;
   border-radius: 0.25em;
 }
-#texte_destination{
+#texte_destination {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -434,18 +434,17 @@ section iframe{
   justify-content: space-around;
 }
 
-#texte_destination h3{
+#texte_destination h3 {
   text-decoration: underline;
   text-align: center;
 }
-.image_a_cacher{
+.image_a_cacher {
   display: none;
 }
-#texte_destination div p{
+#texte_destination div p {
   text-align: center;
   width: 100%;
 }
-
 
 /*Bouton pour revenir en haut de la page.*/
 
@@ -461,7 +460,7 @@ section iframe{
   z-index: 999;
 }
 
-footer :hover{
+footer :hover {
   background-color: rgb(255, 119, 0);
   transition-delay: 0.3s;
   transition: background-color 0.5s ease-in-out;
@@ -484,7 +483,7 @@ footer :hover{
 /*  */
 
 /* css pour la section .reserve */
-.reserve{
+.reserve {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -501,11 +500,11 @@ footer :hover{
   margin-bottom: 100%;
 }
 
-.reserve:hover{
+.reserve:hover {
   background-color: rgba(148, 147, 147, 0.7);
 }
 
-#btn_resa{
+#btn_resa {
   background-color: #fff;
   color: #000;
   padding: 10px 20px;
@@ -518,9 +517,9 @@ footer :hover{
   font-weight: bold;
 }
 
-#btn_resa:hover{
+#btn_resa:hover {
   background-color: rgb(255, 119, 0);
-  color:#fff;
+  color: #fff;
   transition-delay: 0.3s;
   transition: background-color 0.5s ease-in-out;
 }
@@ -530,34 +529,32 @@ footer :hover{
 /*responsive -------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------*/
 
-@media screen and (min-width : 400px) {
-
-  .reserve{
+@media screen and (min-width: 400px) {
+  .reserve {
     width: 40%;
     margin: 0 auto;
     margin-bottom: 5%;
   }
-  .Texte_intro{
+  .Texte_intro {
     font-size: 16px;
   }
-  .Titre_intro{
+  .Titre_intro {
     width: 50%;
     padding-top: 10px;
     min-height: 30px;
   }
-  .Titre_infos{
+  .Titre_infos {
     /* padding-bottom: 4px; */
     width: 330px;
     text-transform: uppercase;
   }
-  .conteneur_destination{
+  .conteneur_destination {
     height: 70vh;
   }
 }
 
-
-@media screen and (min-width : 1000px){
-  .presentation{
+@media screen and (min-width: 1000px) {
+  .presentation {
     flex-direction: row;
     height: 100vh;
     align-items: center;
@@ -566,17 +563,17 @@ footer :hover{
   /* #diaporama_envie{
     padding-top: 0%;
   } */
-  .Colonne_Intro{
+  .Colonne_Intro {
     height: 65%;
     justify-content: space-between;
     width: 40%;
   }
-  .Image_intro{
+  .Image_intro {
     height: 175px;
     max-width: 275px;
   }
 
-  article{
+  article {
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
@@ -584,21 +581,21 @@ footer :hover{
     height: 100vh;
   }
 
-  .conteneur_destination{
+  .conteneur_destination {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
   }
-  .destination{
+  .destination {
     margin: 0px;
     height: 175px;
     position: relative;
     width: 100%;
   }
   /*permet de mettre l'iframe en bas à droite*/
-  section iframe{
+  section iframe {
     height: 75px;
     width: 150px;
     z-index: 2;
@@ -606,11 +603,11 @@ footer :hover{
     right: 0px;
     bottom: 0px;
   }
-  .destination a{
+  .destination a {
     display: none;
     height: 25px;
   }
-  #texte_destination{
+  #texte_destination {
     height: 100%;
     width: 40%;
     display: flex;
@@ -618,21 +615,21 @@ footer :hover{
     justify-content: space-between;
     text-align: center;
   }
-  #texte_destination div{
+  #texte_destination div {
     height: 175px;
   }
-  #diaporama_envie{
+  #diaporama_envie {
     height: 100vh;
   }
-  #diapo_txt{
+  #diapo_txt {
     height: 400px;
     width: 75%;
   }
-  .slides p{
+  .slides p {
     font-size: 18px;
   }
   /*affiche l'image de fond*/
-  .image_a_cacher{
+  .image_a_cacher {
     display: block;
     width: 500px;
     height: 175px;
@@ -641,10 +638,9 @@ footer :hover{
     z-index: 1;
     width: 100%;
   }
-
 }
-@media screen and (orientation: landscape){
-  .presentation{
+@media screen and (orientation: landscape) {
+  .presentation {
     flex-direction: row;
     height: 600px;
     align-items: center;
@@ -654,17 +650,17 @@ footer :hover{
   /* #diaporama_envie{
     padding-top: 0%;
   } */
-  .Colonne_Intro{
+  .Colonne_Intro {
     height: 65%;
     justify-content: space-between;
     width: 50%;
   }
-  .Image_intro{
+  .Image_intro {
     height: 175px;
     width: 65%;
   }
 
-  article{
+  article {
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
@@ -673,28 +669,28 @@ footer :hover{
     justify-content: space-between;
   }
 
-  .conteneur_destination{
+  .conteneur_destination {
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 50%;
   }
-  .destination{
+  .destination {
     margin: 0px;
     height: 175px;
     width: 100%;
   }
   /*permet de mettre l'iframe en bas à droite*/
-  section iframe{
+  section iframe {
     height: 100px;
     padding-top: 10%;
   }
-  .destination a{
+  .destination a {
     display: none;
     height: 25px;
   }
-  #texte_destination{
+  #texte_destination {
     height: 100%;
     width: 50%;
     display: flex;
@@ -702,20 +698,18 @@ footer :hover{
     justify-content: space-between;
     text-align: center;
   }
-  #texte_destination div{
+  #texte_destination div {
     height: 175px;
     padding: 0px 5%;
   }
-  #diaporama_envie{
+  #diaporama_envie {
     height: 100vh;
   }
-  #diapo_txt{
+  #diapo_txt {
     height: 400px;
     width: 75%;
   }
-  .slides p{
+  .slides p {
     font-size: 18px;
   }
-  
-
 }
