@@ -693,6 +693,7 @@ footer :hover {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    
   }
   #texte_destination div {
     height: 175px;
