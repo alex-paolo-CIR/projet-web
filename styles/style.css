@@ -110,13 +110,13 @@ html {
 
 /* CSS POUR RESA  */
 
-#Resa {
+/* #Resa {
   background-image: url("../images/accueil/accueil.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
   color: white;
-}
+} */
 
 body #Resa {
   font-family: Arial, sans-serif;
