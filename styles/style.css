@@ -110,13 +110,13 @@ html {
 
 /* CSS POUR RESA  */
 
-/* #Resa {
-  background-image: url("../images/accueil/accueil.jpg");
+#Resa {
+  background-image: url("../images/accueil/image.png");
   background-size: cover;
   background-attachment: fixed;
-  background-position: center center;
+  background-position: center;
   color: white;
-} */
+}
 
 body #Resa {
   font-family: Arial, sans-serif;
@@ -128,7 +128,7 @@ main#ResaMain {
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.135);
+  background-color: rgba(0, 0, 0, 0.562);
   border: 2px solid white;
 }
 
@@ -798,6 +798,15 @@ form {
   }
 }
 */
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url("../images/accueil/image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
 
 /*responsive pour telephones petit*/
 
