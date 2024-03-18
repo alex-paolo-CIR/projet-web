@@ -444,6 +444,23 @@ input[type="submit"]:hover {
   z-index: 999;
 }
 
+.connect {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.connect img {
+  width: 30px;
+  height: 30px;
+}
+
 footer :hover {
   background-color: rgb(255, 119, 0);
   transition-delay: 0.3s;
