@@ -8,7 +8,7 @@
             background-color: gray;
         }
     </style>
-    <title>Document</title>
+    <title>Création Compte</title>
 
 </head>
 <body>

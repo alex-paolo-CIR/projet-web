@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Connexion</title>
 </head>
 <body>
 
@@ -14,6 +14,9 @@ $emailErr = $passwordErr = "";
 
 
 ?>
+
+<a href="preferences.php">Formulaire préférences</a>
+<a href="connexion.php">Créer un compte</a>
 
 <h2>connexion</h2>
 <div>
