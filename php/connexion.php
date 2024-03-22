@@ -89,9 +89,9 @@ function valider_Telephone($tel){
 
 //on valide la date de naissance si elle est inférieure à la date actuelle et si l'utilisateur a plus de 16 ans
 function valider_DateNaissance($dnaissance){
-    $dateActuelle = date("Y-m-d");
-    $dateNaissance = date($dnaissance);
-    $age = date_diff($dateActuelle, $dateNaissance);
+    $dateActuelle = new DateTime();
+    $dateNaissance = new DateTime($dnaissance);
+    $age = $dateActuelle->diff($dateNaissance)->y;
     if($dateNaissance < $dateActuelle && $age > 16){
         return true;
     }
