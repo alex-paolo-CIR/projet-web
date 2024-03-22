@@ -456,19 +456,18 @@ input[type="submit"]:hover {
 
 .connect {
   text-decoration: none;
-  padding: 10px;
+  padding: 5px;
   font-family: sans-serif;
   background: #868686;
-  border-radius: 100px;
+  border-radius: 2em;
   position: fixed;
-  top: 10px;
-  right: 10px;
+  top: 60px;
+  left: 10px;
   z-index: 999;
 }
-
 .connect img {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 footer :hover {
@@ -508,7 +507,30 @@ footer :hover {
   text-decoration: none;
   color: white;
 }
+
+.dropdown2 {
+  position: fixed;
+  top: 45px;
+  left: -1000px; /* position hors de l'écran */
+  background: #868686;
+  border-radius: 10px;
+  padding: 10px;
+  transition: left 0.3s ease;
+  z-index: 998;
+  font-size: 90%;
+}
+
+.dropdown2 a {
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+}
+
 .menu:hover + .dropdown {
+  left: 60px;
+}
+
+.connect:hover + .dropdown2 {
   left: 60px;
 }
 
@@ -530,11 +552,22 @@ footer :hover {
   left: 60px;
 }
 
+.dropdown2:hover {
+  left: 60px;
+}
+
 .dropdown a:hover {
   color: rgb(255, 119, 0);
   transition: color 1s ease;
   text-decoration: underline;
 }
+
+.dropdown2 a:hover {
+  color: rgb(255, 119, 0);
+  transition: color 1s ease;
+  text-decoration: underline;
+}
+
 .menu img {
   display: block;
   margin-left: auto;

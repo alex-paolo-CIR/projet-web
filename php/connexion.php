@@ -99,14 +99,14 @@ function valider_DateNaissance($dnaissance){
 }
 
 //Tests bouton envoyer et methode POST
-if (!isset($_POST['Envoyer']) && $_SERVER['REQUEST_METHOD'] != 'POST'){
-    header('location:connexion.php');	
-}
+// if (!isset($_POST['Envoyer']) && $_SERVER['REQUEST_METHOD'] != 'POST'){
+//     header('location:connexion.php');	
+// }
 
-//Tests si champs vides
-if (empty($_POST['civilite']) || empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']) || empty($_POST['tel']) || empty($_POST['dnaissance'])){
-    header('location:connexion.php');
-}
+// //Tests si champs vides
+// if (empty($_POST['civilite']) || empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']) || empty($_POST['tel']) || empty($_POST['dnaissance'])){
+//     header('location:connexion.php');
+// }
 
 
 //on recupère les données d'une façon sécurisée
@@ -121,9 +121,9 @@ $vDnaissance = nettoyer_donnees($_POST['dnaissance']);
 if(valider_NomPrenom($vNom) && valider_NomPrenom($vPrenom) && valider_email($vEmail) && valider_Telephone($vTel) && valider_DateNaissance($vDnaissance)){
     creation_compte($vCivilite, $vNom, $vPrenom, $vEmail, $vTel, $vDnaissance);
 }
-else{ 
-    header('location:connexion.php');
-}
+// else{ 
+//     header('location:login.php');
+// }
 ?>
 
     
