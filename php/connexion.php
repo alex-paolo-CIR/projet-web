@@ -90,7 +90,7 @@
 </form>
 
 
-//Ici: Fonctions pour valider les champs
+<?php
 function nettoyer_donnees($donnees){
     $donnees = trim($donnees);
     $donnees = stripslashes($donnees);
