@@ -121,9 +121,7 @@ $vDnaissance = nettoyer_donnees($_POST['dnaissance']);
 if(valider_NomPrenom($vNom) && valider_NomPrenom($vPrenom) && valider_email($vEmail) && valider_Telephone($vTel) && valider_DateNaissance($vDnaissance)){
     creation_compte($vCivilite, $vNom, $vPrenom, $vEmail, $vTel, $vDnaissance);
 }
-else{ 
-    header('location:connexion.php');
-}
+
 ?>
 
     
