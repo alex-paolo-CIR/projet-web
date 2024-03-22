@@ -8,7 +8,7 @@
             background-color: gray;
         }
     </style>
-    <title>Document</title>
+    <title>Création Compte</title>
 
 </head>
 <body>
@@ -17,7 +17,41 @@
         body{
             background-color: gray;
         }
+        span{
+            color : red;
+        }
     </style>
+
+<?php
+		$emailErr = $telErr = $photoErr = $CiviliteErr = $prenomErr = $nomErr = $dnaissanceErr = $filiereErr = $sportsErr =" ";
+		if (empty($_POST['civilite'])){
+			$CiviliteErr = "La civilité est obligatoire";
+		}
+		if (empty($_POST['prenom'])){
+			$prenomErr = "Le prénom est obligatoire";
+		}
+		if (empty($_POST['nom'])){
+			$nomErr = "Le nom est obligatoire";
+		}
+		if (empty($_POST['email'])){
+			$emailErr = "L'email est obligatoire";
+		}
+		if (empty($_POST['tel'])){
+			$telErr = "Le téléphone est obligatoire";
+		}
+		if (empty($_POST['dnaissance'])){
+			$dnaissanceErr = "La date de naissance est obligatoire";
+		}
+		if (empty($_POST['filiere'])){
+			$filiereErr = "La filière est obligatoire";
+		}
+		if (empty($_POST['sports'])){
+			$sportsErr = "Le sport est obligatoire";
+		}
+		if (empty($_FILES['photo'])){
+			$photoErr = "La photo est obligatoire";
+		}
+		?>
 
 <form method="post" action="../php/connexion.php" enctype="multipart/form-data">
     <fieldset>
@@ -55,7 +89,6 @@
     </fieldset>
 </form>
 
-<?php
 
 //Ici: Fonctions pour valider les champs
 function nettoyer_donnees($donnees){
