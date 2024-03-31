@@ -12,7 +12,9 @@
         h2{
             text-align: center;
             color: white;
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            margin-top: 10%;
         }
         form{
             width:50%;
@@ -41,6 +43,7 @@
             background-color: #333;
             color: #fff;
             cursor: pointer;
+            font-weight: bold;
         }
         input[type="submit"]:hover{
             background-color: #555;
@@ -106,6 +109,44 @@
             width: 33%;
             margin-right: 32%;
         }
+
+
+        input[type="checkbox"]{
+            display: inline-block;
+        }
+        label[for="remember"]{
+            display: inline-block;
+            width: 50%;
+            font-size: 0.8em;
+            position: relative;
+            top: -2px;
+        }
+        
+
+        /* adapter pour mobile */
+        @media screen and (max-width: 768px){
+            form{
+                width: 80%;
+            }
+            .center-form{
+                width: 80%;
+                margin-right:5%;
+            }
+            .links{
+                width: 80%;
+                margin-left: 10%;
+            }
+
+            /* adapter le fond decran pour mobile, zoomer sur une partie du fond d'écran */
+            .wallpaper{
+                object-fit: cover;
+                object-position: 0 0;
+            }
+         
+
+
+        }
+       
     </style>
 </head>
 <body>
@@ -124,6 +165,8 @@
             <input type="email" name="email" id="email" required> <span><?php echo $emailErr; ?></span>
             <label for="password">Mot de passe*</label>
             <input type="password" name="password" id="password" required>*: Champs obligatoire <br><br><span><?php echo $passwordErr; ?></span>
+            <!-- remember me with text on the right -->
+            <input type="checkbox" name="remember" id="remember"> <label for="remember">Se souvenir de moi</label>
             <input type="submit" value="Se connecter">
         </form>
     </div>
