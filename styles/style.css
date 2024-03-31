@@ -520,7 +520,7 @@ footer :hover {
 
 .dropdown2 {
   position: fixed;
-  top: 45px;
+  top: 65px;
   left: -1000px; /* position hors de l'écran */
   background: #868686;
   border-radius: 10px;
@@ -534,6 +534,7 @@ footer :hover {
   display: inline-flex;
   text-decoration: none;
   color: white;
+  top: 68px;
 }
 
 .menu:hover + .dropdown {
@@ -564,6 +565,7 @@ footer :hover {
 
 .dropdown2:hover {
   left: 60px;
+  top: 65px;
 }
 
 .dropdown a:hover {
@@ -582,6 +584,11 @@ footer :hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.connect:hover {
+  /* change color to orange*/
+  background-color: rgb(255, 119, 0);
 }
 
 /*Bouton pour revenir a la page d'accueil.*/
