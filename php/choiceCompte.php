@@ -76,7 +76,7 @@
             height: 100%;
             overflow: hidden;
             z-index: -1;
-            filter: brightness(50%);
+            filter: brightness(40%);
         }
         #connect {
             width: 100%;
@@ -150,7 +150,7 @@
     </style>
 </head>
 <body>
-    <img src="../images/divers/resa.jpg" alt="wallpaper" class="wallpaper">
+    <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
     <?php
     $emailErr = $passwordErr = "";
     ?>
