@@ -10,7 +10,7 @@
 <?php
 
 //on crée les varriables pour les messages d'erreurs
-$emailErr = $passwordErr = "";
+$emailErr = $passwordErr = $erreurCO ="";
 
 
 ?>
@@ -18,14 +18,29 @@ $emailErr = $passwordErr = "";
 <a href="preferences.php">Formulaire préférences</a>
 <a href="connexion.php">Créer un compte</a>
 
-<h2>connexion</h2>
+<style>
+    div{
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    
+</style>
+
+<h2>Connexion</h2>
 <div>
     <h3>Connectez vous</h3>
-    <form action="connexion.php" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>* <span><?php echo $emailErr; ?></span>
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" required>* <span><?php echo $passwordErr; ?></span>
+    <p>Les champs marqués d'un * sont obligatoires</p>
+    <span><?php echo $erreurCO ?></span>
+    <form action="choiceCompte.php" method="post">
+        <label for="email">Email *</label><span><?php echo $emailErr; ?></span>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Mot de passe *</label><span><?php echo $passwordErr; ?></span>
+        <input type="password" name="password" id="password" required>
         <input type="submit" value="Se connecter">
     </form>
 </div>
@@ -57,29 +72,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $passwordErr = "Le mot de passe doit contenir au moins 8 caractères";
     }
     //on vérifie si les champs sont valides
-    if (empty($emailErr) && empty($passwordErr)){
-        //on se connecte à la base de données
-        $connexion = mysqli_connect('localhost', 'root', '', 'tp2');
-        //on vérifie si la connexion est établie
-        if (!$connexion){
-            die('Erreur de connexion ('.mysqli_connect_errno().')'.mysqli_connect_error());
+    if (!empty($emailErr) && !empty($passwordErr)){
+        
+        try{
+			require("paramCompte.php");               
+			
+			//on prépare la requête
+            $requete = "SELECT * FROM compteclient WHERE email = '$email' AND password = '$password'";
+			$req = $conn->prepare($requete);
+			$req->execute(array('email' => $email, 'password' => $password));
+
+            //on récupère les données de l'utilisateur
+            $resultat = $req->fetch();
+            $email = $resultat['email'];
+            $password = $resultat['password'];
+        
+            //on ferme la connexion
+			$conn= NULL;
+			header("Location:./index.html");
+		}                 
+		catch(Exception $e){
+			die("Erreur : " . $e->getMessage());
+            $erreurCO = "L'email ou le mot de passe est incorrect";
         }
-        //on prépare la requête
-        $requete = "SELECT * FROM utilisateurs WHERE email = '$email' AND password = '$password'";
-        //on exécute la requête
-        $resultat = mysqli_query($connexion, $requete);
-        //on vérifie si la requête a retourné un résultat
-        if (mysqli_num_rows($resultat) == 1){
-            //on redirige l'utilisateur vers la page d'accueil
-            header('location:accueil.php');
-        }else{
-            //on affiche un message d'erreur
-            echo "Email ou mot de passe incorrect";
-        }
-        //on ferme la connexion
-        mysqli_close($connexion);
     }
 }
-
-
 ?>
