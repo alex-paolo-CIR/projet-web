@@ -166,8 +166,8 @@ label {
   margin-bottom: 10px;
 }
 
-input[type="text"],
 input[type="email"],
+input[type="name"],
 select.pays {
   width: 100%;
   padding: 10px;
@@ -175,6 +175,16 @@ select.pays {
   border: 1px solid #ccc;
   border-radius: 5px;
 }
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
 
 input[type="date"] {
   margin-bottom: 10px;
@@ -510,7 +520,7 @@ footer :hover {
 
 .dropdown2 {
   position: fixed;
-  top: 45px;
+  top: 65px;
   left: -1000px; /* position hors de l'écran */
   background: #868686;
   border-radius: 10px;
@@ -524,6 +534,7 @@ footer :hover {
   display: inline-flex;
   text-decoration: none;
   color: white;
+  top: 68px;
 }
 
 .menu:hover + .dropdown {
@@ -554,6 +565,7 @@ footer :hover {
 
 .dropdown2:hover {
   left: 60px;
+  top: 65px;
 }
 
 .dropdown a:hover {
@@ -572,6 +584,11 @@ footer :hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.connect:hover {
+  /* change color to orange*/
+  background-color: rgb(255, 119, 0);
 }
 
 /*Bouton pour revenir a la page d'accueil.*/
@@ -597,7 +614,7 @@ footer :hover {
   height: 300px;
   background-color: rgba(149, 149, 149, 0.4);
   align-items: center;
-  border-radius: 6em;
+  border-radius: 3em;
   margin-top: 10vh;
   margin-left: auto;
   margin-right: auto;
@@ -618,6 +635,7 @@ footer :hover {
 .footer_section p {
   width: 80%;
   text-align: center;
+  margin-left: 10px;
 }
 .socials {
   width: 100%;
@@ -679,6 +697,7 @@ form {
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.336);
 }
+
 .contact_form button:hover {
   background-color: rgba(0, 0, 0, 0.76);
   cursor: pointer;
@@ -688,7 +707,16 @@ form {
   text-align: center;
 }
 
+/* div contact */
+
+/* .contact {
+  margin-left: 20px;
+} */
+
+
 /* ---------------------------------------------------------------------------------------- */
+
+/* form resposive */
 
 /*responsive pour grade tablettes/pc*/
 
@@ -727,11 +755,16 @@ form {
     -ms-flex-align: center;
     align-items: center;
   }
+
 }
 
 /*Responsive pour telephone et petite tablette.*/
 
 @media screen and (max-width: 800px) {
+  
+  .contact_form button {
+    margin-bottom: 50px;
+  }
   /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
   #presentation {
     height: 1000px;

@@ -1,11 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Préférence Client</title>
     <style>
+        .wallpaper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .wallpaper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            /* assombrir limage */
+            filter: brightness(40%);
+        }
         /* Style pour la boîte de dialogue modale */
+
         .modal {
             display: none;
             position: fixed;
@@ -30,15 +48,112 @@
         .modal-btn {
             margin-top: 10px;
         }
+
+        /* Style pour le formulaire */
+
+        body {
+            font-family: "Rubik", sans-serif;
+            background-color: black;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            margin-top: 4%;
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 auto;
+            display: block;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        select, input[type="number"] {
+            background-color: #fff;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+
+        
     </style>
 </head>
 <body>
 
+
+<!-- wallpaper -->
+<div class="wallpaper">
+    <img src="../images/accueil/accueil.jpg" alt="wallpaper">
+</div>
+
+
 <h1>Votre compte a été créé avec succès</h1>
-<p>Afin de pouvoir améliorer votre expérience sur notre site, nous vous proposons de répondre à ce questionnaire. Il permettra de vous proposer des destinations qui vous correspondent le mieux.</p>
+<p>Afin de pouvoir améliorer votre expérience sur notre site, nous vous proposons de répondre à ce questionnaire. 
+<!-- saut d eligne -->
+<br>
+Il permettra de vous proposer des destinations qui vous correspondent le mieux.</p>
 
 <!-- Bouton qui permet de revenir à la page d'accueil -->
 <button onclick="afficherConfirmation()">Retour à l'accueil</button>
+<br>
 
 <!-- Boîte de dialogue modale -->
 <div id="myModal" class="modal">
