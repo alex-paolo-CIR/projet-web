@@ -53,7 +53,7 @@
 		}
 		?>
 
-<form method="post" action="../php/connexion.php" enctype="multipart/form-data">
+<form method="post" action="../php/register.php" enctype="multipart/form-data">
     <fieldset>
         <legend>Informations sur vous</legend>
         
