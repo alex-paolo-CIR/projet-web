@@ -37,12 +37,13 @@
         }
 
         .modal-content {
-            background-color: #fefefe;
+            background-color: rgba(0,0,0,0.8);
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 80%;
+            width: 40%;
             text-align: center;
+            border-radius: 10px;
         }
 
         .modal-btn {
