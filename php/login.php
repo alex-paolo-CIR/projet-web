@@ -151,55 +151,78 @@
 </head>
 <body>
     <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
+    
     <?php
+    require_once('paramCompte.php');
+
     $emailErr = $passwordErr = "";
+
+    // Vérification de l'envoi du formulaire
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $email = nettoyer_donnees($_POST['email']);
+        $password = $_POST['password'];
+
+        // Connexion à la base de données
+        $conn = new mysqli($host, $user, $pass, $db);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT password FROM compteclient WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $stored_password = $row['password'];
+        
+            if ($password === $stored_password) {
+                echo "<h2>Connexion réussie</h2>";
+                header("refresh:5;url=profil.php");
+            } else {
+                $passwordErr = "Mot de passe incorrect";
+            }
+        } else {
+            $emailErr = "Email non trouvé";
+        }
+        
+
+        $stmt->close();
+        $conn->close();
+    }
+
+    // Fonction pour nettoyer les données
+    function nettoyer_donnees($donnees) {
+        $donnees = trim($donnees);
+        $donnees = stripslashes($donnees);
+        $donnees = htmlspecialchars($donnees);
+        return $donnees;
+    }
     ?>
+
     <h2>Connectez-vous</h2>
     <div id="connect">
         <div class="links">
             <a href="preferences.php" class="left-link">Formulaire préférences</a>
             <a href="register.php" class="left-link">Créer un compte</a>
         </div>
-        <form action="login.php" method="post" class="center-form">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="center-form">
             <label for="email">Email*</label>
-            <input type="email" name="email" id="email" required> <span><?php echo $emailErr; ?></span>
+            <input type="email" name="email" id="email" required>
+            <span class="error"><?php echo $emailErr; ?></span> <!-- Affichez le message d'erreur ici -->
+            
             <label for="password">Mot de passe*</label>
-            <input type="password" name="password" id="password" required>*: Champs obligatoire <br><br><span><?php echo $passwordErr; ?></span>
-            <input type="checkbox" name="remember" id="remember"> <label for="remember">Se souvenir de moi</label>
+            <input type="password" name="password" id="password" required>
+            <span class="error"><?php echo $passwordErr; ?></span> <!-- Affichez le message d'erreur ici -->
+
+            <br>
+            <input type="checkbox" name="remember" id="remember">
+            <label for="remember">Se souvenir de moi</label>
+            
             <input type="submit" value="Se connecter">
         </form>
     </div>
 </body>
 </html>
-<?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST'){
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    if (empty($email)){
-        $emailErr = "L'email est obligatoire";
-    }
-    if (empty($password)){
-        $passwordErr = "Le mot de passe est obligatoire";
-    }
-    if (!empty($email) && !filter_var($email, FILTER_VALIDATE_EMAIL)){
-        $emailErr = "L'email n'est pas valide";
-    }
-    if (!empty($password) && strlen($password) < 8){
-        $passwordErr = "Le mot de passe doit contenir au moins 8 caractères";
-    }
-    if (empty($emailErr) && empty($passwordErr)){
-        $connexion = mysqli_connect('localhost', 'root', '', 'tp2');
-        if (!$connexion){
-            die('Erreur de connexion ('.mysqli_connect_errno().')'.mysqli_connect_error());
-        }
-        $requete = "SELECT * FROM utilisateurs WHERE email = '$email' AND password = '$password'";
-        $resultat = mysqli_query($connexion, $requete);
-        if (mysqli_num_rows($resultat) == 1){
-            header('location:accueil.php');
-        }else{
-            echo "Email ou mot de passe incorrect";
-        }
-        mysqli_close($connexion);
-    }
-}
-?>

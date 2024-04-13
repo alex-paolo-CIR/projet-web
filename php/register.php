@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
         ";
         // wait for 3 seconds
-        header("refresh:3;url=choiceCompte.php");
+        header("refresh:3;url=login.php");
     } else {
         echo "Erreur: " . $sql . "<br>" . $conn->error;
     }
