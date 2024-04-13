@@ -69,6 +69,37 @@
                 object-position: 0 0;
             }
         }
+
+
+        /* css pr les boutons options mets les cote a cote */
+        .buttonOpt {
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 auto;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            margin-top: 10px;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .buttonOpt button {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 0 auto;
+            display: block;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        
     </style>
 <body>
 <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
@@ -92,6 +123,11 @@
         <label for="dateNaissance">Date de naissance :</label><br>
         <input type="date" id="dateNaissance" name="dateNaissance" required><br><br>
         <input type="submit" value="S'inscrire">
+        <!-- button pour "déja un compte" et formulaire de préférence -->
+        <div class="buttonOpt">
+            <button onclick="window.location.href='login.php'">Déjà un compte ?</button>
+            <button onclick="window.location.href='preferences.php'">Formulaire préférences</button>
+        </div>
     </form>
 
     <?php

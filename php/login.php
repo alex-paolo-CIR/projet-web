@@ -165,7 +165,6 @@
             <input type="email" name="email" id="email" required> <span><?php echo $emailErr; ?></span>
             <label for="password">Mot de passe*</label>
             <input type="password" name="password" id="password" required>*: Champs obligatoire <br><br><span><?php echo $passwordErr; ?></span>
-            <!-- remember me with text on the right -->
             <input type="checkbox" name="remember" id="remember"> <label for="remember">Se souvenir de moi</label>
             <input type="submit" value="Se connecter">
         </form>
