@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-</head>
-<style>
+    <style>
         body {
             font-family: "Rubik", sans-serif;
             background-color: #f4f4f4;
@@ -98,40 +97,16 @@
             border: none;
             border-radius: 10px;
         }
-
-        
+        .error {
+            color: red;
+        }
     </style>
+</head>
 <body>
-<img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
-    <h2>Inscription</h2>
-    <form method="post" action="register.php">
-        <label for="nom">Nom :</label><br>
-        <input type="text" id="nom" name="nom" required><br>
-        <label for="prenom">Prénom :</label><br>
-        <input type="text" id="prenom" name="prenom" required><br>
-        <label for="numTel">Numéro de téléphone :</label><br>
-        <input type="text" id="numTel" name="numTel" required><br>
-        <label for="email">Email :</label><br>
-        <input type="email" id="email" name="email" required><br>
-        <label for="password">Mot de passe :</label><br>
-        <input type="password" id="password" name="password" required><br>
-        <label for="genre">Genre :</label><br>
-        <select id="genre" name="genre" required>
-            <option value="0">Homme</option>
-            <option value="1">Femme</option>
-        </select><br>
-        <label for="dateNaissance">Date de naissance :</label><br>
-        <input type="date" id="dateNaissance" name="dateNaissance" required><br><br>
-        <input type="submit" value="S'inscrire">
-        <!-- button pour "déja un compte" et formulaire de préférence -->
-        <div class="buttonOpt">
-            <button onclick="window.location.href='login.php'">Déjà un compte ?</button>
-            <button onclick="window.location.href='preferences.php'">Formulaire préférences</button>
-        </div>
-    </form>
-
-    <?php
+<?php
 include 'paramCompte.php'; // Inclusion du fichier de paramètres de connexion
+
+$nomErr = $prenomErr = $numTelErr = $emailErr = $passwordErr = $dateNaissanceErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération des données du formulaire
@@ -154,24 +129,86 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sql = "INSERT INTO compteclient (ID, Nom, Prenom, numTel, email, password, genre, dateNaissance) 
             VALUES (NULL, '$nom', '$prenom', '$numTel', '$email', '$password', '$genre', '$dateNaissance')";
 
-    // Exécution de la requête SQL
-    if ($conn->query($sql) === TRUE) {
-        echo "
-        <!-- Affichage d'un message sur tout l'écran de succès -->
-        <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); color: white; font-size: 30px; text-align: center; padding-top: 20%;'>
-            Inscription réussie
-        </div>
-        ";
-        // wait for 3 seconds
-        header("refresh:3;url=login.php");
-    } else {
-        echo "Erreur: " . $sql . "<br>" . $conn->error;
+    // checker si le mot de passe est bien sécurisé avec des chiffres et des lettres caractères spéciaux, etc.
+    if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/", $password)) {
+        $passwordErr = "Le mot de passe doit contenir au moins 8 caractères, dont au moins une lettre minuscule, une lettre majuscule, un chiffre et un caractère spécial.";
+    }
+
+    // checker si l'email est bien un email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $emailErr = "L'adresse email n'est pas valide.";
+    }
+
+    // checker si le numéro de téléphone est bien un numéro de téléphone
+    if (!preg_match("/^[0-9]{10}$/", $numTel)) {
+        $numTelErr = "Le numéro de téléphone doit contenir 10 chiffres.";
+    }
+
+    // checker si la date de naissance est bien une date de naissance valide
+    if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dateNaissance)) {
+        $dateNaissanceErr = "La date de naissance n'est pas valide.";
+    }
+
+    // Exécution de la requête SQL si aucun message d'erreur
+    if (empty($nomErr) && empty($prenomErr) && empty($numTelErr) && empty($emailErr) && empty($passwordErr) && empty($dateNaissanceErr)) {
+        if ($conn->query($sql) === TRUE) {
+            echo "
+            <!-- Affichage d'un message sur tout l'écran de succès -->
+            <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); color: white; font-size: 30px; text-align: center; padding-top: 20%;'>
+                Inscription réussie
+            </div>
+            ";
+            // rediriger vers la page de connexion après 3 secondes
+            header("refresh:3;url=login.php");
+        } else {
+            echo "Erreur: " . $sql . "<br>" . $conn->error;
+        }
     }
 
     // Fermeture de la connexion
     $conn->close();
 }
 ?>
+<img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
+<h2>Inscription</h2>
+<form method="post" action="register.php">
+    <label for="nom">Nom :</label><br>
+    <input type="text" id="nom" name="nom" required><br>
+    <span class="error"><?php echo $nomErr;?></span><br>
 
+    <label for="prenom">Prénom :</label><br>
+    <input type="text" id="prenom" name="prenom" required><br>
+    <span class="error"><?php echo $prenomErr;?></span><br>
+
+    <label for="numTel">Numéro de téléphone :</label><br>
+    <input type="text" id="numTel" name="numTel" required><br>
+    <span class="error"><?php echo $numTelErr;?></span><br>
+
+    <label for="email">Email :</label><br>
+    <input type="email" id="email" name="email" required><br>
+    <span class="error"><?php echo $emailErr;?></span><br>
+
+    <label for="password">Mot de passe :</label><br>
+    <input type="password" id="password" name="password" required><br>
+    <span class="error"><?php echo $passwordErr;?></span><br>
+
+    <label for="genre">Genre :</label><br>
+    <select id="genre" name="genre" required>
+        <option value="0">Homme</option>
+        <option value="1">Femme</option>
+    </select><br>
+
+    <label for="dateNaissance">Date de naissance :</label><br>
+    <input type="date" id="dateNaissance" name="dateNaissance" required><br>
+    <span class="error"><?php echo $dateNaissanceErr;?></span><br><br>
+
+    <input type="submit" value="S'inscrire">
+
+    <!-- Boutons pour "déjà un compte" et formulaire de préférence -->
+    <div class="buttonOpt">
+        <button onclick="window.location.href='login.php'">Déjà un compte ?</button>
+        <button onclick="window.location.href='preferences.php'">Formulaire préférences</button>
+    </div>
+</form>
 </body>
 </html>
