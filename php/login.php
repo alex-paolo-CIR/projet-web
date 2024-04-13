@@ -158,9 +158,9 @@
     <div id="connect">
         <div class="links">
             <a href="preferences.php" class="left-link">Formulaire préférences</a>
-            <a href="connexion.php" class="left-link">Créer un compte</a>
+            <a href="register.php" class="left-link">Créer un compte</a>
         </div>
-        <form action="connexion.php" method="post" class="center-form">
+        <form action="login.php" method="post" class="center-form">
             <label for="email">Email*</label>
             <input type="email" name="email" id="email" required> <span><?php echo $emailErr; ?></span>
             <label for="password">Mot de passe*</label>
