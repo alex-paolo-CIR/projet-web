@@ -100,6 +100,7 @@
             background-color: #333;
             border-radius: 5px;
             margin-bottom: 10px;
+            font-size: 0.9em;
         }
         .links a:hover {
             background-color: #555;
@@ -206,7 +207,7 @@
     <div id="connect">
         <div class="links">
             <a href="preferences.php" class="left-link">Formulaire préférences</a>
-            <a href="register.php" class="left-link">Créer un compte</a>
+            <a href="register.php" class="left-link">Pas de compte ? Créez-en un !</a>
         </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="center-form">
             <label for="email">Email*</label>

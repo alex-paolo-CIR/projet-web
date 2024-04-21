@@ -25,10 +25,10 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         label {
-            display: block;
-            padding-top: 8px;
+            padding-top: 1px;
+             margin-bottom: 4px; /* Facultatif : réduire l'espace entre les champs */
         }
-        input[type="email"], input[type="text"], input[type="password"], input[type="submit"] {
+        input[type="email"], input[type="text"], input[type="password"], input[type="submit"], input[type="date"], select {
             background-color: #fff;
             width: 100%;
             padding-top: 8px;
@@ -38,6 +38,11 @@
             margin-right: 10px;
             justify-content: center;
         }
+
+        select {
+            margin-bottom: 10px;
+        }
+
         input[type="submit"] {
             background-color: #333;
             color: #fff;
@@ -105,6 +110,7 @@
 <body>
 <?php
 include 'paramCompte.php'; // Inclusion du fichier de paramètres de connexion
+include 'fonctionConnexion.php'; // Inclusion du fichier de fonctions de connexion
 
 $nomErr = $prenomErr = $numTelErr = $emailErr = $passwordErr = $dateNaissanceErr = "";
 
@@ -144,9 +150,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $numTelErr = "Le numéro de téléphone doit contenir 10 chiffres.";
     }
 
-    // checker si la date de naissance est bien une date de naissance valide
-    if (!preg_match("/^\d{4}-\d{2}-\d{2}$/", $dateNaissance)) {
-        $dateNaissanceErr = "La date de naissance n'est pas valide.";
+    // checker si la date de naissance est bien une date de naissance valide avec fonction valider_DateNaissance
+
+    if (!valider_DateNaissance($dateNaissance)) {
+        $dateNaissanceErr = "La date de naissance n'est pas valide. L'âge minimum requis est 16 ans.";
     }
 
     // Exécution de la requête SQL si aucun message d'erreur
