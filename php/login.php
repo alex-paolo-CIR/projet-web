@@ -156,6 +156,8 @@
     <?php
     require_once('paramCompte.php');
 
+    session_start();
+
     $emailErr = $passwordErr = "";
 
     // Vérification de l'envoi du formulaire
@@ -181,6 +183,20 @@
         
             if ($password === $stored_password) {
                 echo "<h2>Connexion réussie</h2>";
+                $_SESSION['loggedin'] = true;
+                $_SESSION['email'] = $email;
+                // requete sql pour avoir l'id et lattribué à la session
+                $sql_id = "SELECT ID FROM compteclient WHERE email = ?";
+                $stmt_id = $conn->prepare($sql_id);
+                $stmt_id->bind_param("s", $email);
+                $stmt_id->execute();
+                $result_id = $stmt_id->get_result();
+        
+                if ($result_id->num_rows > 0) {
+                    $row_id = $result_id->fetch_assoc();
+                    $_SESSION['id'] = $row_id['ID']; // Attribuer l'ID à la session
+                }
+                
                 header("refresh:5;url=profil.php");
             } else {
                 $passwordErr = "Mot de passe incorrect";

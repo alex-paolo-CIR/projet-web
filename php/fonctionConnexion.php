@@ -41,6 +41,17 @@ function valider_DateNaissance($dnaissance){
     return false;
 }
 
+function valider_photoProfil($photoProfil){
+    $tailleMax = 10000000000;
+    $extensionsValides = array('jpg', 'jpeg', 'png', 'gif');
+    if($photoProfil['size'] <= $tailleMax){
+        $extensionUpload = strtolower(substr(strrchr($photoProfil['name'], '.'), 1));
+        if(in_array($extensionUpload, $extensionsValides)){
+            return true;
+        }
+    }
+    return false;
+}
 
 //Tests bouton envoyer et methode POST
 // if (!isset($_POST['Envoyer']) && $_SERVER['REQUEST_METHOD'] != 'POST'){
