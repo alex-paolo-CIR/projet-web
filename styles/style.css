@@ -464,6 +464,10 @@ input[type="submit"]:hover {
   z-index: 999;
 }
 
+/* en haut a droite avec nom de compte et photo de profil */
+
+
+
 .connect {
   text-decoration: none;
   padding: 5px;

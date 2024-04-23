@@ -157,7 +157,7 @@ $conn->close();
             <span><?php echo $dateNaissance; ?></span>
         </div>
         <div class="buttonOpt">
-            <button onclick="window.location.href='edit_profile.php'">Modifier le profil</button>
+            <button onclick="window.location.href='../'">Je voyage !</button>
             <button onclick="window.location.href='logout.php'">Se déconnecter</button>
         </div>
     </div>

@@ -160,8 +160,16 @@
 
     $emailErr = $passwordErr = "";
 
+    // check si deja connecté
+    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+        header("Location: profil.php");
+        exit;
+    }
+
     // Vérification de l'envoi du formulaire
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+
         $email = nettoyer_donnees($_POST['email']);
         $password = $_POST['password'];
 

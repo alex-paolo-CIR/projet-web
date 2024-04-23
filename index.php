@@ -1,3 +1,43 @@
+<?php
+// Inclusion du fichier de paramètres de connexion
+include './php/paramCompte.php';
+// Inclusion du fichier de fonctions de connexion
+include './php/fonctionConnexion.php';
+
+// Déclaration des variables pour stocker les éventuelles erreurs
+$prenom = $photoPath = "";
+
+// Vérification si l'utilisateur est connecté
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    header("location: login.php");
+    exit;
+}
+
+// Récupération des informations de l'utilisateur depuis la base de données
+$conn = new mysqli($host, $user, $pass, $db);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$user_id = $_SESSION['id'];
+
+$sql = "SELECT * FROM compteclient WHERE ID='$user_id'";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $prenom = $row['Prenom'];
+        $photoPath = $row['photoProfil'];
+    }
+} else {
+  
+    echo "Aucun résultat trouvé.";
+}
+
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="FR">
   <head>
@@ -246,16 +286,42 @@
               <a href="./html/tunisie.html">TUNISIE</a>
             </div>
           </nav>
+          
+          <!-- mon nom de profil et ma photo en petit rond -->
+          <a class="profil" href="php/login.php"
+    style="
+    position: fixed;
+    right: 0;
+    margin: 10px;
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    top: 2%;
+    ">
+    <img style="
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 10px;
+    margin-top: -16px;
+    "
+    src="<?php
+    echo './php/'.$photoPath;
+    ?>"
+    />
+    Bonjour 
+    <?php
+    echo $prenom;
+    ?> !
+</a>
 
-          <a class="connect" href="php/login.php"
-              ><img src="./images/iconeConnection.png"
-            /></a>
 
-          <nav class="dropdown2">
-            <div class="dropdown-content2">
-              <a href="php/login.php">◀️ Mon compte</a>
-            </div>
-          </nav>
+
+
+
+
           
           <div class="footer_content">
             <div class="footer_section about">
