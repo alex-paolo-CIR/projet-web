@@ -159,16 +159,16 @@ $conn->close();
                 <div class="conteneur_pres">
                   <img
                     class="image_pres"
-                    src="images/france/La_Tour_Eiffel.jpg" <?php // $pays[0][2]?>
+                    src="images/france/La_Tour_Eiffel.jpg" 
                     alt="Paris"
                   />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">FRANCE</p> <?php // $pays[0][0]?>
+                  <p class="titre_pays">FRANCE</p>
                   <p>
                     Le pays le plus visité au monde ne l'est pas pour rien ! La
                     variété de paysage, la culture et même sa gastronomie vous
-                    surprendront à chaque nouvelle visite. <?php // $pays[0][1]?>
+                    surprendront à chaque nouvelle visite. 
                   </p>
                   <div class="boutton_decouvrir">
                     <a href="./html/france.html">DÉCOUVRIR LA DESTINATION</a>
@@ -179,16 +179,16 @@ $conn->close();
                 <div class="conteneur_pres">
                   <img
                     class="image_pres"
-                    src="./images/argentine/Argentine.png" <?php // $pays[1][2]?>
+                    src="./images/argentine/Argentine.png" 
                     alt="Argentine"
                   />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">ARGENTINE</p> <?php // $pays[1][0]?>
+                  <p class="titre_pays">ARGENTINE</p>
                   <p>
                     L'Argentine connaît une immense diversité de paysages. En
                     effet, au nord le pays est très désertique tandis qu’au sud,
-                    les lacs sont remplis d'immenses glaciers. <?php // $pays[1][1]?>
+                    les lacs sont remplis d'immenses glaciers. 
                   </p>
                   <div class="boutton_decouvrir">
                     <a href="./html/argentine.html">DÉCOUVRIR LA DESTINATION</a> <?php // $pays[0][0]."php"?>
