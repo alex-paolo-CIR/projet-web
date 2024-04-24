@@ -39,6 +39,27 @@ if ($result->num_rows > 0) {
 } else {
     echo "Aucun résultat trouvé.";
 }
+
+
+//on récupère les réservations de l'utilisateur via l'email 
+$req = "SELECT * FROM reservations WHERE email='$email'";
+$result = $conn->query($req);
+
+//on enregistre les réservations dans un tableau 
+$reservations = array();
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $reservations[] = $row;
+    }
+} else {
+    echo "Aucune réservation trouvée.";
+}
+
+//on trie les réservations par date de réservation
+usort($reservations, function ($a, $b) {
+    return strtotime($a['dateReservation']) - strtotime($b['dateReservation']);
+});
+
 $conn->close();
 ?>
 
@@ -63,7 +84,7 @@ $conn->close();
             margin-top: 2%;
         }
 
-        .container {
+        #container {
             width: 50%;
             margin: 0 auto;
             background-color: #fff;
@@ -123,14 +144,24 @@ $conn->close();
             border-radius: 10px;
             margin: 0 10px;
         }
+        .selecteurPanierProfil{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2%;
+            flex-direction: row;
+        }
     </style>
 </head>
 
 <body>
     
 <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
-    <h2>Profil</h2>
-    <div class="container">
+    <div id = "selecteurPanierProfil">
+        <h2>Profil</h2>
+        <h2>Réservations</h2>
+    </div>
+    
+    <div id="container">
         <img id="pp" src="<?php echo $photoPath ?>" alt="Photo de profil">
         <div class="info">
             <label for="nom">Nom :</label>
@@ -161,7 +192,50 @@ $conn->close();
             <button onclick="window.location.href='logout.php'">Se déconnecter</button>
         </div>
     </div>
+
+    <div id = "containerResa">
+        <table style="margin: 0 auto; margin-top: 20px; border : solid black 1px">
+            <tr>
+                <th>Numéro de réservation</th>
+                <th>Date de réservation</th>
+                <th>Nombre de passagers</th>
+                <th>Destination</th>
+                <th>Nombre de bagages</th>
+                <th>Montant total</th>
+            </tr>
+            <?php
+            foreach ($reservations as $reservation) {
+                echo "<tr>";
+                echo "<td>" . $reservation['numReservation'] . "</td>";
+                echo "<td>" . $reservation['dateReservation'] . "</td>";
+                echo "<td>" . $reservation['nbPassagers'] . "</td>";
+                echo "<td>" . $reservation['destination'] . "</td>";
+                echo "<td>" . $reservation['nbBagages'] . "</td>";
+                echo "<td>" . $reservation['montantTotal'] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </table>
+    </div>
     
+    <script>
+        //on fait un script qui permet lorsque les titres (profil et réservations) sont cliqués, on affiche le container correspondant et on cache l'autre
+        var profil = document.getElementById("container");
+        var containerResa = document.getElementById("containerResa");
+        var selecteurPanierProfil = document.getElementById("selecteurPanierProfil");
+        var container = document.getElementById("container");
+        containerResa.style.display = "none";
+        selecteurPanierProfil.addEventListener("click", function(){
+            if(container.style.display == "none"){
+                container.style.display = "block";
+                containerResa.style.display = "none";
+            }
+            else{
+                container.style.display = "none";
+                containerResa.style.display = "block";
+            }
+        });
+    </script>
 </body>
 
 </html>
