@@ -40,9 +40,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $photoPath = "/uploads/defaulti.jpg";
 }
 
-
-
-
 $conn->close();
 ?>
 
