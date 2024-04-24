@@ -40,35 +40,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $photoPath = "/uploads/defaulti.jpg";
 }
 
-//on récupère les informations du formulaire attaché au compte client (la clé étrangère de la table formulaire est l'id du client)
-$sql = "SELECT * FROM formulaire WHERE ID='$user_id'";
-$result = $conn->query($sql);
 
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $continent = $row['continent'];
-        $type = $row['type'];
-        $budget = $row['budget'];
-        $duree = $row['duree'];
-    }
-} else {
-    echo "Aucun résultat trouvé.";
-}
-
-//on récupère les pays qui correspondent aux préférences de l'utilisateur (pour l'index on fera juste en fonction du continent)
-//les autres préfèrences serviront à modifier la page de présentation des pays
-$sql = "SELECT * FROM pays WHERE continent='$continent'";
-$result = $conn->query($sql);
-
-//on place les informations dans une liste de liste. Chaque liste correspond à un pays
-$pays = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $pays[] = array($row['nom'], $row['description'], $row['image']);
-    }
-} else {
-    echo "Aucun résultat trouvé.";
-}
 
 
 $conn->close();
