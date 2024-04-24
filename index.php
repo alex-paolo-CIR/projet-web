@@ -10,32 +10,35 @@ $prenom = $photoPath = "";
 // Vérification si l'utilisateur est connecté
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    header("location: login.php");
-    exit;
+  // wait 5 sec and alert
+  echo '<script>setTimeout(function(){alert("Vous n\'êtes pas connecté. Veuillez vous connecter pour accéder à cette fonctionnalité.");}, 5000);</script>';
 }
-
-// Récupération des informations de l'utilisateur depuis la base de données
-$conn = new mysqli($host, $user, $pass, $db);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$user_id = $_SESSION['id'];
-
-$sql = "SELECT * FROM compteclient WHERE ID='$user_id'";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
-        $prenom = $row['Prenom'];
-        $photoPath = $row['photoProfil'];
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    $conn = new mysqli($host, $user, $pass, $db);
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
+    $user_id = $_SESSION['id'];
+
+    $sql = "SELECT * FROM compteclient WHERE ID='$user_id'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $prenom = 'Bonjour '.$row['Prenom'].' !';
+            $photoPath = $row['photoProfil'];
+        }
+    } else {
+        echo "Aucun résultat trouvé.";
+    }
+
+    $conn->close();
 } else {
-  
-    echo "Aucun résultat trouvé.";
+    // Si l'utilisateur n'est pas connecté, vous pouvez afficher "Mon Compte" à la place du prénom
+    $prenom = "Mon Compte";
+    // Utiliser la photo de profil par défaut
+    $photoPath = "/uploads/defaulti.jpg";
 }
-
-
-$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -263,7 +266,7 @@ $conn->close();
               <a style="
             display: inline-block; 
             text-align: center;" 
-            href="./html/reservation.html"><button class="glow-on-hover" type="button">RESERVER</button></a>
+            href="./php/reservation.php"><button class="glow-on-hover" type="button">RESERVER</button></a>
           </center>
 
           </article>  
@@ -310,11 +313,10 @@ $conn->close();
     src="<?php
     echo './php/'.$photoPath;
     ?>"
-    />
-    Bonjour 
+    /> 
     <?php
     echo $prenom;
-    ?> !
+    ?>
 </a>
 
 
