@@ -191,7 +191,7 @@ $conn->close();
                     les lacs sont remplis d'immenses glaciers. 
                   </p>
                   <div class="boutton_decouvrir">
-                    <a href="./html/argentine.html">DÉCOUVRIR LA DESTINATION</a> <?php // $pays[0][0]."php"?>
+                    <a href="./html/argentine.html">DÉCOUVRIR LA DESTINATION</a> 
                   </div>
                 </div>
               </div>
@@ -199,16 +199,16 @@ $conn->close();
                 <div class="conteneur_pres">
                   <img
                     class="image_pres"
-                    src="images/japon/japonPRES.jpg" <?php // $pays[1][2]?>
+                    src="images/japon/japonPRES.jpg" 
                     alt=" japon"
                   />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">JAPON</p> <?php // $pays[0][0]?>
+                  <p class="titre_pays">JAPON</p> 
                   <p>
                     Le Japon, aussi appelé pays du soleil levant est connu pour
                     la richesse de paysage qu'offrent ses campagnes mais aussi
-                    ses villes immenses symboles de modernité et d’avancée <?php // $pays[0][1]?>
+                    ses villes immenses symboles de modernité et d’avancée 
                     technologique.
                   </p>
                   <div class="boutton_decouvrir">
@@ -220,20 +220,20 @@ $conn->close();
                 <div class="conteneur_pres">
                   <img
                     class="image_pres"
-                    src="./images/suede/suedePres.jpg" <?php // $pays[0][2]?>
+                    src="./images/suede/suedePres.jpg"
                     alt=" Suede"
                   />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">SUEDE</p> <?php // $pays[0][0]?>
+                  <p class="titre_pays">SUEDE</p> 
                   <p>
                     La Suède, pays scandinave d'Europe, plaît grâce à sa
                     combinaison entre une nature préservée et une riche histoire
                     culturelle. La Suède offre un paysage diversifié, de lacs
-                    étincelants et de côtes donnant sur la mer Baltique. <?php // $pays[0][1]?>
+                    étincelants et de côtes donnant sur la mer Baltique. 
                   </p>
                   <div class="boutton_decouvrir">
-                    <a href="./html/suede.html">DÉCOUVRIR LA DESTINATION</a> <?php // $pays[0][0].php?>
+                    <a href="./html/suede.html">DÉCOUVRIR LA DESTINATION</a> 
                   </div>
                 </div>
               </div>
@@ -241,16 +241,16 @@ $conn->close();
                 <div class="conteneur_pres">
                   <img
                     class="image_pres"
-                    src="./images/tunisie/acceuilTunisie.jpg" <?php // $pays[0][0]?>
+                    src="./images/tunisie/acceuilTunisie.jpg" 
                     alt=" Namibie"
                   />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">TUNISIE</p> <?php // $pays[0][0]?>
+                  <p class="titre_pays">TUNISIE</p> 
                   <p>
                     La Tunisie est un pays d'Afrique du Nord situé sur la côte
                     méditerranéenne. Il est connu pour ses plages et ses
-                    stations balnéaires, telles que celles de Sousse et de <?php // $pays[0][1]?>
+                    stations balnéaires, telles que celles de Sousse et de 
                     Monastir.
                   </p>
                   <div class="boutton_decouvrir">
