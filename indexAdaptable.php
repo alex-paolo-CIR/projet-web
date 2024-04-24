@@ -174,112 +174,79 @@ $conn->close();
               </div>
             </section>
             <section id="ancre_pays">
-              <h1 id="presentation_titre" style="text-decoration: underline">
-                LES MEILLEURES DESTINATIONS
-              </h1>
-              <div class="conteneur_pays">
+            <h1 id="presentation_titre" style="text-decoration: underline">
+                <?php echo "LES MEILLEURES DESTINATIONS"; ?>
+            </h1>
+            <div class="conteneur_pays">
                 <div class="conteneur_pres">
-                  <img
-                    class="image_pres"
-                    src="images/france/La_Tour_Eiffel.jpg" <?php // $pays[0][2]?>
-                    alt="Paris"
-                  />
+                    <img class="image_pres" src=<?php echo $pays[0][2]; ?> alt="Paris" />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">FRANCE</p> <?php // $pays[0][0]?>
-                  <p>
-                    Le pays le plus visité au monde ne l'est pas pour rien ! La
-                    variété de paysage, la culture et même sa gastronomie vous
-                    surprendront à chaque nouvelle visite. <?php // $pays[0][1]?>
-                  </p>
-                  <div class="boutton_decouvrir">
-                    <a href="./html/france.html">DÉCOUVRIR LA DESTINATION</a>
-                  </div>
+                    <p class="titre_pays"><?php echo $pays[0][0]; ?></p>
+                    <p>
+                        <?php echo $pays[0][1]; ?>
+                    </p>
+                    <div class="boutton_decouvrir">
+                        <a href=<?php echo "./html/".$pays[0][1].".php"; ?>>DÉCOUVRIR LA DESTINATION</a>
+                    </div>
                 </div>
-              </div>
-              <div class="conteneur_pays">
+            </div>
+            <div class="conteneur_pays">
                 <div class="conteneur_pres">
-                  <img
-                    class="image_pres"
-                    src="./images/argentine/Argentine.png" <?php // $pays[1][2]?>
-                    alt="Argentine"
-                  />
+                    <img class="image_pres" src=<?php echo $pays[1][2]; ?> alt="Argentine" />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">ARGENTINE</p> <?php // $pays[1][0]?>
-                  <p>
-                    L'Argentine connaît une immense diversité de paysages. En
-                    effet, au nord le pays est très désertique tandis qu’au sud,
-                    les lacs sont remplis d'immenses glaciers. <?php // $pays[1][1]?>
-                  </p>
-                  <div class="boutton_decouvrir">
-                    <a href="./html/argentine.html">DÉCOUVRIR LA DESTINATION</a> <?php // $pays[0][0]."php"?>
-                  </div>
+                    <p class="titre_pays"><?php echo $pays[1][0]; ?></p>
+                    <p>
+                        <?php echo $pays[1][1]; ?>
+                    </p>
+                    <div class="boutton_decouvrir">
+                        <a href=<?php echo $pays[1][0].".php"; ?>>DÉCOUVRIR LA DESTINATION</a>
+                    </div>
                 </div>
-              </div>
-              <div class="conteneur_pays">
+            </div>
+            <div class="conteneur_pays">
                 <div class="conteneur_pres">
-                  <img
-                    class="image_pres"
-                    src="images/japon/japonPRES.jpg" <?php // $pays[1][2]?>
-                    alt=" japon"
-                  />
+                    <img class="image_pres" src=<?php echo $pays[2][2]; ?> alt="japon" />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">JAPON</p> <?php // $pays[0][0]?>
-                  <p>
-                    Le Japon, aussi appelé pays du soleil levant est connu pour
-                    la richesse de paysage qu'offrent ses campagnes mais aussi
-                    ses villes immenses symboles de modernité et d’avancée <?php // $pays[0][1]?>
-                    technologique.
-                  </p>
-                  <div class="boutton_decouvrir">
-                    <a href="./html/japon.html">DÉCOUVRIR LA DESTINATION</a>
-                  </div>
+                    <p class="titre_pays"><?php echo $pays[2][0]; ?></p>
+                    <p>
+                        <?php echo $pays[2][1]; ?>
+                    </p>
+                    <div class="boutton_decouvrir">
+                        <a href=<?php echo "./html/".$pays[2][1].".php"; ?>>DÉCOUVRIR LA DESTINATION</a>
+                    </div>
                 </div>
-              </div>
-              <div class="conteneur_pays">
+            </div>
+            <div class="conteneur_pays">
                 <div class="conteneur_pres">
-                  <img
-                    class="image_pres"
-                    src="./images/suede/suedePres.jpg" <?php // $pays[0][2]?>
-                    alt=" Suede"
-                  />
+                    <img class="image_pres" src=<?php echo $pays[3][2]; ?> alt="Suede" />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">SUEDE</p> <?php // $pays[0][0]?>
-                  <p>
-                    La Suède, pays scandinave d'Europe, plaît grâce à sa
-                    combinaison entre une nature préservée et une riche histoire
-                    culturelle. La Suède offre un paysage diversifié, de lacs
-                    étincelants et de côtes donnant sur la mer Baltique. <?php // $pays[0][1]?>
-                  </p>
-                  <div class="boutton_decouvrir">
-                    <a href="./html/suede.html">DÉCOUVRIR LA DESTINATION</a> <?php // $pays[0][0].php?>
-                  </div>
+                    <p class="titre_pays"><?php echo $pays[3][0]; ?></p>
+                    <p>
+                        <?php echo $pays[3][1]; ?>
+                    </p>
+                    <div class="boutton_decouvrir">
+                        <a href=<?php echo "./html/".$pays[3][1].".php"; ?>>DÉCOUVRIR LA DESTINATION</a>
+                    </div>
                 </div>
-              </div>
-              <div class="conteneur_pays">
+            </div>
+            <div class="conteneur_pays">
                 <div class="conteneur_pres">
-                  <img
-                    class="image_pres"
-                    src="./images/tunisie/acceuilTunisie.jpg" <?php // $pays[0][0]?>
-                    alt=" Namibie"
-                  />
+                    <img class="image_pres" src=<?php echo $pays[4][2]; ?> alt="Tunisie" />
                 </div>
                 <div class="conteneur_info_pays">
-                  <p class="titre_pays">TUNISIE</p> <?php // $pays[0][0]?>
-                  <p>
-                    La Tunisie est un pays d'Afrique du Nord situé sur la côte
-                    méditerranéenne. Il est connu pour ses plages et ses
-                    stations balnéaires, telles que celles de Sousse et de <?php // $pays[0][1]?>
-                    Monastir.
-                  </p>
-                  <div class="boutton_decouvrir">
-                    <a href="./html/tunisie.html">DÉCOUVRIR LA DESTINATION</a>
-                  </div>
+                    <p class="titre_pays"><?php echo $pays[4][0]; ?></p>
+                    <p>
+                        <?php echo $pays[4][1]; ?>
+                    </p>
+                    <div class="boutton_decouvrir">
+                        <a href=<?php echo "./html/".$pays[4][1].".php"; ?>>DÉCOUVRIR LA DESTINATION</a>
+                    </div>
                 </div>
-              </div>
+            </div>
             </section>
             <h1 id="presentation_titre">SATISFAIT ?</h1>
             <p style="

@@ -1,0 +1,22 @@
+{
+    "countries": [
+        {
+            "name": "France",
+            "imageURL": "https://example.com/image1.jpg",
+            "description": "Description of Country 1",
+            "hashtags": ["Europe", "tag2", "tag3"]
+        },
+        {
+            "name": "Country 2",
+            "imageURL": "https://example.com/image2.jpg",
+            "description": "Description of Country 2",
+            "hashtags": ["tag4", "tag5", "tag6"]
+        },
+        {
+            "name": "Country 3",
+            "imageURL": "https://example.com/image3.jpg",
+            "description": "Description of Country 3",
+            "hashtags": ["tag7", "tag8", "tag9"]
+        }
+    ]
+}
