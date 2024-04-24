@@ -39,6 +39,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $conn->close();
 }
 ?>
+<?php
+// Vérifier si le cookie de réservation existe
+if(isset($_COOKIE['reservation'])) {
+    // Convertir les données JSON en tableau associatif
+    $reservation_data = json_decode($_COOKIE['reservation'], true);
+    // Supprimer le cookie après récupération des données
+    setcookie('reservation', '', time() - 3600, "/");
+} else {
+    // Si le cookie n'existe pas, initialiser un tableau vide
+    $reservation_data = array(
+        'genre' => '',
+        'nom' => '',
+        'prenom' => '',
+        'email' => '',
+        'pays' => '',
+        'date_depart' => '',
+        'duree' => '',
+        'nb_voyageurs' => '',
+        'nb_bagages' => ''
+    );
+}
+
+// Pré-remplir les champs du formulaire avec les données du cookie
+$genre = $reservation_data['genre'];
+$nom = $reservation_data['nom'];
+$prenom = $reservation_data['prenom'];
+$email = $reservation_data['email'];
+$pays = $reservation_data['pays'];
+$date_depart = $reservation_data['date_depart'];
+$duree = $reservation_data['duree'];
+$nb_voyageurs = $reservation_data['nb_voyageurs'];
+$nb_bagages = $reservation_data['nb_bagages'];
+?>
 <!DOCTYPE html>
 <html lang="FR">
 <head>
