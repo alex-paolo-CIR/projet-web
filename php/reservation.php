@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$genre', '$nom', '$prenom', '$email', '$pays', '$date_depart', $duree, $nb_voyageurs, $nb_bagages)";
 
     if ($conn->query($sql) === TRUE) {
-        echo "            <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); color: white; font-size: 30px; text-align: center; padding-top: 20%; z-index: 1;
+        echo "            <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); color: white; font-size: 30px; text-align: center; padding-top: 20%; z-index: 999;
         '>
         Réservation créer ! Bon voyage !
     </div>";
@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <h1 id="resah1" style="display: flex; align-items: center; text-align: center; justify-content: center; text-decoration: underline;">
                 Réservation de votre voyage
             </h1>
+            
 
             <form id="resaform" method="post">
                 <div class="genre">
