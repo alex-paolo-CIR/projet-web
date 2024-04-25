@@ -40,25 +40,23 @@ if ($result->num_rows > 0) {
     echo "Aucun résultat trouvé.";
 }
 
+// Récupération des réservations de l'utilisateur depuis la base de données
+$sqlReservations = "SELECT * FROM reservations WHERE email='$email'";
+$resultReservations = $conn->query($sqlReservations);
 
-//on récupère les réservations de l'utilisateur via l'email 
-$req = "SELECT * FROM reservations WHERE email='$email'";
-$result = $conn->query($req);
-
-//on enregistre les réservations dans un tableau 
+// Initialisation de la variable pour stocker les réservations
 $reservations = array();
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
+
+if ($resultReservations->num_rows > 0) {
+    while ($row = $resultReservations->fetch_assoc()) {
         $reservations[] = $row;
     }
-} else {
-    echo "Aucune réservation trouvée.";
-}
 
-//on trie les réservations par date de réservation
-usort($reservations, function ($a, $b) {
-    return strtotime($a['dateReservation']) - strtotime($b['dateReservation']);
-});
+    $Resa = "RÉSERVATIONS";
+
+} else {
+    $pasResa = "Aucune réservation trouvée.";
+}
 
 $conn->close();
 ?>
@@ -144,11 +142,32 @@ $conn->close();
             border-radius: 10px;
             margin: 0 10px;
         }
+
         .selecteurPanierProfil{
             display: flex;
             justify-content: space-around;
             margin-top: 2%;
             flex-direction: row;
+        }
+
+        table {
+            color: white;
+            margin: 0 auto;
+            margin-top: 20px;
+            border : solid black 1px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: solid black 1px;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
         }
     </style>
 </head>
@@ -158,7 +177,15 @@ $conn->close();
 <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
     <div id = "selecteurPanierProfil">
         <h2>Profil</h2>
-        <h2>Réservations</h2>
+        <h2>
+            <?php
+            if (isset($Resa)) {
+                echo $Resa;
+            } else {
+                echo $pasResa;
+            }
+            ?>
+        </h2>
     </div>
     
     <div id="container">
@@ -194,10 +221,12 @@ $conn->close();
     </div>
 
     <div id = "containerResa">
-        <table style="margin: 0 auto; margin-top: 20px; border : solid black 1px">
+        <table>
             <tr>
                 <th>Numéro de réservation</th>
                 <th>Date de réservation</th>
+                <th>Date de départ</th>
+                <th>Durée</th>
                 <th>Nombre de passagers</th>
                 <th>Destination</th>
                 <th>Nombre de bagages</th>
@@ -206,12 +235,14 @@ $conn->close();
             <?php
             foreach ($reservations as $reservation) {
                 echo "<tr>";
-                echo "<td>" . $reservation['numReservation'] . "</td>";
-                echo "<td>" . $reservation['dateReservation'] . "</td>";
-                echo "<td>" . $reservation['nbPassagers'] . "</td>";
-                echo "<td>" . $reservation['destination'] . "</td>";
-                echo "<td>" . $reservation['nbBagages'] . "</td>";
-                echo "<td>" . $reservation['montantTotal'] . "</td>";
+                echo "<td>" . $reservation['id_reservation'] . "</td>";
+                echo "<td>" . $reservation['date_reservation'] . "</td>";
+                echo "<td>" . $reservation['date_depart'] . "</td>";
+                echo "<td>" . $reservation['duree'] . " jours</td>";
+                echo "<td>" . $reservation['nb_voyageurs'] . "</td>";
+                echo "<td>" . $reservation['pays'] . "</td>";
+                echo "<td>" . $reservation['nb_bagages'] . "</td>";
+                echo "<td>" . $reservation['montant_total'] . "</td>";
                 echo "</tr>";
             }
             ?>

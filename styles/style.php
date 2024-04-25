@@ -1,0 +1,932 @@
+<?php
+header("Content-type: text/css; charset: UTF-8");
+?>
+
+/*Code generale, fait effet sur toute la page.*/
+* {
+  font-family: "Rubik", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+#Accueil {
+  background-image: url("../images/accueil/accueil.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.596);
+  z-index: 1;
+}
+
+
+/*  */
+
+/* css pour la div .reserve */
+.reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* ajouteer les memes contours que les conteneurs_pays */
+  border: 2px solid white;
+  border-radius: 0.5em;
+  margin: 20px 0px;
+  background-color: rgba(149, 149, 149, 0.4);
+  width: 500px;
+  height: 200px;
+}
+/*  */
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  /* centrer it on the page */
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto;
+  font-size: large;
+  width: 220px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #be8b5b;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  overflow: hidden; /* Ajout de overflow pour masquer le débordement du pseudo-élément */
+
+  /* Animation sur le pseudo-élément directement */
+  &:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.573),
+      rgba(255, 128, 0, 0.609),
+      transparent,
+      transparent
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    opacity: 1; /* Réglage de l'opacité ici */
+    border-radius: 10px;
+    animation: glowing 20s linear infinite;
+  }
+
+  &:active {
+    color: #000;
+  }
+
+  &:active:after {
+    background: transparent;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+/* #btn_resa:hover {
+  background-color: rgb(255, 119, 0);
+  color: #fff;
+  transition-delay: 0.3s;
+  transition: background-color 0.5s ease-in-out;
+} */
+
+/*  */
+
+
+/* CSS POUR RESA  */
+
+#Resa {
+  background-image: url("../images/accueil/image.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
+body #Resa {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+main#ResaMain {
+  margin: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.562);
+  border: 2px solid white;
+}
+
+h1#resah1 {
+  color: #f7f7f7;
+  text-align: center;
+}
+
+form#resaform {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* space between all inputs */
+  justify-content: space-between;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.genre{
+  display:inline-flex;
+  margin-bottom: 10px;
+}
+
+input[type="email"],
+input[type="name"],
+select.pays {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+
+input[type="date"] {
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+.homee {
+  text-decoration: none;
+  padding: 14px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 2em;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 500px) {
+  h1#resah1 {
+    margin-top: 100px;
+  }
+}
+/*  */
+
+/*Code qui s'occupe de la mise en page pour l'écran quand on arrive sur le site*/
+
+#Titre {
+  width: 100%;
+  color: white;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100vh; /* Utilisez 100 % de la hauteur de la fenêtre. */
+  vertical-align: middle; /*met le truc au milieu verticalement*/
+
+
+}
+
+#Titre h1 {
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px;
+  text-shadow: 2px 2px 4px #868181;
+}
+
+.boutton_en_savoir_plus {
+  background-color: rgb(255, 119, 0);
+  border: solid 0px black;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  width: 100px;
+}
+.boutton_en_savoir_plus:hover {
+  cursor: pointer;
+}
+.boutton_en_savoir_plus a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
+
+#presentation {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+#presentation_titre {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  /* text-decoration: underline; */
+  /* font-family: "Oswald", sans-serif; */
+}
+
+.conteneur_presentation {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  /* height: 100%; */ /*(ALEX) j'ai enlevé car y'a trop d'espace entre le titre et les détails*/
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.conteneur_colone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 50%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.categorie_presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /* center images */
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  width: 500px;
+  height: 200px;
+  justify-content: center;
+}
+.categorie_presentation img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+.titre_texte {
+  width: 70%;
+  padding-left: 10px;
+}
+
+/*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+
+#ancre_pays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.conteneur_pays {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: rgba(149, 149, 149, 0.4);
+  border: solid black 0px;
+  border-radius: 0.5em;
+  width: 800px;
+  height: 300px;
+  border: 2px solid white;
+  margin: 20px 0px;
+}
+.conteneur_pays:hover {
+  background-color: rgba(148, 147, 147, 0.7);
+}
+
+.conteneur_pres {
+  width: 60%;
+}
+.image_pres {
+  margin: 5%;
+  width: 90%;
+  height: auto;
+  /* fit the image perfectly */
+  object-fit: cover;
+  border-radius: 0.5em;
+  border: 2px solid white;
+}
+
+.conteneur_info_pays {
+  width: 35%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.conteneur_info_pays p {
+  width: 100%;
+  margin: 0px;
+  text-align: center;
+}
+
+.titre_pays {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.boutton_decouvrir {
+  position: relative;
+  color: white;
+  background-color: rgb(255, 255, 255);
+  border: solid 0px black;
+  border-radius: 2em;
+  padding: 0.5em 1em;
+  height: 45px;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.boutton_decouvrir a {
+  display: block;
+  text-decoration: none;
+  padding-bottom: 50px;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+  height: 8px;
+}
+.boutton_decouvrir a:hover {
+  color: rgb(255, 119, 0);
+}
+
+/*Bouton pour remonter tout en haut de la page.*/
+
+.top {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+/* en haut a droite avec nom de compte et photo de profil */
+
+
+
+.connect {
+  text-decoration: none;
+  padding: 5px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 2em;
+  position: fixed;
+  top: 60px;
+  left: 10px;
+  z-index: 999;
+}
+.connect img {
+  width: 35px;
+  height: 35px;
+}
+
+footer :hover {
+  background-color: rgb(255, 119, 0);
+  transition-delay: 0.3s;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/*petit menu des familles */
+
+.menu {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 2em;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 999;
+}
+
+.dropdown {
+  position: fixed;
+  top: 15px;
+  left: -1000px; /* position hors de l'écran */
+  background: #868686;
+  border-radius: 10px;
+  padding: 10px;
+  transition: left 0.3s ease;
+  z-index: 998;
+  font-size: 90%;
+}
+
+.dropdown a {
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+}
+
+.dropdown2 {
+  position: fixed;
+  top: 65px;
+  left: -1000px; /* position hors de l'écran */
+  background: #868686;
+  border-radius: 10px;
+  padding: 10px;
+  transition: left 0.3s ease;
+  z-index: 998;
+  font-size: 90%;
+}
+
+.dropdown2 a {
+  display: inline-flex;
+  text-decoration: none;
+  color: white;
+  top: 68px;
+}
+
+.menu:hover + .dropdown {
+  left: 60px;
+}
+
+.connect:hover + .dropdown2 {
+  left: 60px;
+}
+
+/* .menu:hover {
+  transition: background 1s ease-in-out;
+  animation: rota 1s;
+  transform: rotate(90deg);
+} */
+@keyframes rota {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.dropdown:hover {
+  left: 60px;
+}
+
+.dropdown2:hover {
+  left: 60px;
+  top: 65px;
+}
+
+.dropdown a:hover {
+  color: rgb(255, 119, 0);
+  transition: color 1s ease;
+  text-decoration: underline;
+}
+
+.dropdown2 a:hover {
+  color: rgb(255, 119, 0);
+  transition: color 1s ease;
+  text-decoration: underline;
+}
+
+.menu img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.connect:hover {
+  /* change color to orange*/
+  background-color: rgb(255, 119, 0);
+}
+
+/*Bouton pour revenir a la page d'accueil.*/
+
+.home {
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  background: #868686;
+  border-radius: 100px;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 999;
+}
+
+/* ------------------------------------------footer---------------------------------------------- */
+
+.footer_content {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 300px;
+  background-color: rgba(149, 149, 149, 0.4);
+  align-items: center;
+  border-radius: 3em;
+  margin-top: 10vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer_content:hover {
+  background-color: rgba(148, 147, 147, 0.7);
+}
+.footer_section {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about {
+  justify-content: space-around;
+}
+.footer_section p {
+  width: 80%;
+  text-align: center;
+  margin-left: 10px;
+}
+.socials {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.socials a {
+  display: block;
+  width: 25%;
+}
+.socials a img {
+  text-decoration: none;
+  width: 60%;
+  margin: 0% 20%;
+}
+.place_image {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.place_image img {
+  width: 50%;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.contact_form input {
+  width: 80%;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.contact_form textarea {
+  width: 80%;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.contact_form button {
+  width: 30%;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 1em;
+  color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.336);
+}
+
+.contact_form button:hover {
+  background-color: rgba(0, 0, 0, 0.76);
+  cursor: pointer;
+}
+
+.footer_bottom {
+  text-align: center;
+}
+
+/* div contact */
+
+/* .contact {
+  margin-left: 20px;
+} */
+
+
+/* ---------------------------------------------------------------------------------------- */
+
+/* form resposive */
+
+/*responsive pour grade tablettes/pc*/
+
+@media screen and (max-width: 1000px) and (min-width: 801px) {
+  /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
+  #presentation {
+    height: 1000px;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .conteneur_presentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .conteneur_colone {
+    width: 100%;
+  }
+
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+
+  .conteneur_pres {
+    width: 90%;
+  }
+  .conteneur_info_pays {
+    width: 90%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+}
+
+/*Responsive pour telephone et petite tablette.*/
+
+@media screen and (max-width: 800px) {
+  
+  .contact_form button {
+    margin-bottom: 50px;
+  }
+  /*Mise en page pour la présentation du site, de ce que va presenter le site pour l'utilisateur.*/
+  #presentation {
+    height: 1000px;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .conteneur_presentation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .conteneur_colone {
+    width: 100%;
+  }
+
+  .categorie_presentation {
+    width: 100%;
+  }
+
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+
+  .conteneur_pays {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+
+  .conteneur_pres {
+    width: 100%;
+  }
+  .conteneur_info_pays {
+    width: 90%;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .boutton_decouvrir {
+    left: 0%;
+    width: 60%;
+    height: 40px;
+  }
+  .boutton_decouvrir a {
+    font-size: 18px;
+    height: 0px;
+  }
+  .footer_content {
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+  }
+  .footer_content div {
+    width: 100%;
+  }
+  .place_image {
+    display: none;
+  }
+  .contact p {
+    width: 100%;
+  }
+}
+@media screen and (orientation: landscape) {
+  .conteneur_pays {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: rgba(149, 149, 149, 0.4);
+    border: solid black 0px;
+    border-radius: 0.5em;
+    width: 700px;
+    height: 270px;
+    border: 2px solid white;
+    margin: 20px 0px;
+  }
+}
+/*
+@media screen and (witdh < 830px) and (orientation: landscape)  {
+  .conteneur_pays{
+    display: -webkit-box;
+    
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(149, 149, 149, 0.4);
+    border: solid black 0px;
+    border-radius: 0.5em;
+    width: 650px;
+    height: 550px;
+    border: 2px solid white;
+    margin: 20px 0px;
+  }
+  .boutton_decouvrir{
+    height: 25px;
+    width: 50%;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+}
+*/
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-image: url("../images/accueil/image.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
+
+/*responsive pour telephones petit*/
+
+@media screen and (max-width: 380px) {
+  /*Partie de code pour mise en page des 5 rectangles pour acceder a la page des pays.*/
+  .conteneur_pays {
+    height: 70vh;
+  }
+  .conteneur_info_pays {
+    width: 100%;
+  }
+
+  .boutton_decouvrir {
+    left: 0%;
+    width: 60%;
+    height: 40px;
+  }
+  .boutton_decouvrir a {
+    font-size: 18px;
+    height: 0px;
+  }
+}

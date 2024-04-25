@@ -52,6 +52,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style.php" />
     <link rel="icon" href="./images/divers/logo.png" />
 
     <link
@@ -68,6 +69,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     />  
     <!--lien pour les icones-->
     <title>JART &copy; - Accueil</title>
+
   </head>
 
   <body id="Accueil">
@@ -289,8 +291,31 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
               <a href="./html/tunisie.html">TUNISIE</a>
             </div>
           </nav>
+
+          <a class="buttonResa" style="text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    background: #868686;
+    border-radius: 2em;
+    position: fixed;
+    top: 50px;
+    left: 10px;
+    z-index: 999;
+    transform: scale(0.55);
+    transform-origin: left;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;" href="./php/reservation.php" onmouseover="document.getElementById('textResa').style.display = 'inline-block';" onmouseout="document.getElementById('textResa').style.display = 'none';">
+    <img src="./images/divers/resa.png">
+    <span id="textResa" style="display: none; margin-left: 10px; color: white; font-size: 100%;transform: scale(1.20);">Réservation</span>
+</a>
+
+
+
+
+
           
-          <!-- mon nom de profil et ma photo en petit rond -->
+          <!-- mon nom de profil et photo en petit rond -->
           <a class="profil" href="php/login.php"
     style="
     position: fixed;
