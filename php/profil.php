@@ -125,6 +125,12 @@ $conn->close();
             color: white;
         }
 
+        .info label {
+            font-weight: bold !important;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            
+        }
+
         .buttonOpt {
             display: flex;
             justify-content: center;
@@ -164,7 +170,8 @@ $conn->close();
             border: solid white 1px;
             background-color: #333;
             padding: 8px;
-            text-align: left;
+            justify-content: center;
+            text-align: center;
         }
 
         th {
@@ -266,7 +273,7 @@ $conn->close();
                     echo "<td>" . $reservation['id_reservation'] . "</td>";
                     echo "<td>" . $reservation['date_reservation'] . "</td>";
                     echo "<td>" . $reservation['date_depart'] . "</td>";
-                    echo "<td>" . $reservation['duree'] . " jours</td>";
+                    echo "<td>" . $reservation['duree'] . " jour(s)</td>";
                     echo "<td>" . $reservation['nb_voyageurs'] . "</td>";
                     echo "<td>" . $reservation['pays'] . "</td>";
                     echo "<td>" . $reservation['nb_bagages'] . "</td>";

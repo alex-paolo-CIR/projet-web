@@ -22,7 +22,13 @@ if (isset($_GET["id"])) {
 
     if ($stmt->execute()) {
         echo "Réservation annulée avec succès.";
-        header("location: profil.php");
+        
+        if($_SESSION["role"] === "admin") {
+            header("location: profil-admin.php");
+        } else {
+            header("location: profil.php");
+        }
+        
         exit();
     } else {
         echo "Une erreur s'est produite lors de l'annulation de la réservation.";

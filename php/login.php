@@ -184,7 +184,9 @@
             $stored_password = $row['password'];
         
             if ($password === $stored_password) {
-                echo "<h2>Connexion réussie</h2>";
+                echo "<div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); color: white; font-size: 30px; text-align: center; padding-top: 20%; z-index: 999;'>
+                Connexion réussie ! Redirection en cours...
+            </div>";
                 $_SESSION['loggedin'] = true;
                 $_SESSION['email'] = $email;
                 // requete sql pour avoir l'id et lattribué à la session
@@ -199,7 +201,19 @@
                     $_SESSION['id'] = $row_id['ID']; // Attribuer l'ID à la session
                 }
                 
-                header("refresh:5;url=profil.php");
+                if(isset($_POST['remember'])){
+                    setcookie('email', $email, time() + 3600 * 24 * 30);
+                    setcookie('password', $password, time() + 3600 * 24 * 30);
+                }
+
+                // Vérification si l'utilisateur est admin donc son id est le 1
+
+                if($_SESSION['id'] === 1){
+                    $_SESSION['role'] = 'admin';
+                    header("refresh:5;url=profil-admin.php");
+                } else {
+                    header("refresh:5;url=profil.php");
+                }
             } else {
                 $passwordErr = "Mot de passe incorrect";
             }
