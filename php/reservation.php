@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   
   // Utilisation de la fonction pour générer un identifiant aléatoire
     $id_reservation = generateRandomId();
-    $genre = $_POST['sexz'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $email = $_POST['email'];
@@ -38,22 +37,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $montant_total = ($tarif_par_personne * $nb_voyageurs) + ($tarif_par_bagage * $nb_bagages);
 
     // Préparer la requête d'insertion
-    $sql = "INSERT INTO reservations (genre, nom, prenom, email, pays, date_depart, duree, nb_voyageurs, nb_bagages, id_reservation, montant_total) 
-            VALUES ('$genre', '$nom', '$prenom', '$email', '$pays', '$date_depart', $duree, $nb_voyageurs, $nb_bagages, $id_reservation, $montant_total)";
+// Préparer la requête d'insertion avec une requête préparée
+$sql = "INSERT INTO reservations (nom, prenom, email, pays, date_depart, duree, nb_voyageurs, nb_bagages, id_reservation, montant_total) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+// Préparer la déclaration
+$stmt = $conn->prepare($sql);
 
-    if ($conn->query($sql) === TRUE) {
-        echo "            <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); color: white; font-size: 30px; text-align: center; padding-top: 20%; z-index: 999;
-        '>
-        Réservation créer ! Bon voyage !
-    </div>";
-        // Rediriger l'utilisateur vers la page d'accueil apres 2 secondes
-        header("refresh:2;url=../index.php");
-    } else {
-        echo "Erreur lors de la réservation: " . $conn->error;
-    }
+// Liage des paramètres
+$stmt->bind_param("sssssssssd", $nom, $prenom, $email, $pays, $date_depart, $duree, $nb_voyageurs, $nb_bagages, $id_reservation, $montant_total);
 
-    $conn->close();
+// Exécution de la requête
+if ($stmt->execute()) {
+    // Succès
+    echo "            <div style='position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7); color: white; font-size: 30px; text-align: center; padding-top: 20%; z-index: 999;
+    '>
+    Réservation créée ! Bon voyage !
+</div>";
+    // Rediriger l'utilisateur vers la page d'accueil après 2 secondes
+    header("refresh:2;url=../index.php");
+} else {
+    // Erreur
+    echo "Erreur lors de la réservation: " . $conn->error;
+}
+
+// Fermeture de la déclaration
+$stmt->close();
+
 }
 ?>
 <?php
@@ -66,7 +76,6 @@ if(isset($_COOKIE['reservation'])) {
 } else {
     // Si le cookie n'existe pas, initialiser un tableau vide
     $reservation_data = array(
-        'genre' => '',
         'nom' => '',
         'prenom' => '',
         'email' => '',
@@ -79,7 +88,6 @@ if(isset($_COOKIE['reservation'])) {
 }
 
 // Pré-remplir les champs du formulaire avec les données du cookie
-$genre = $reservation_data['genre'];
 $nom = $reservation_data['nom'];
 $prenom = $reservation_data['prenom'];
 $email = $reservation_data['email'];
@@ -146,11 +154,6 @@ if ($result->num_rows > 0) {
             display: flex;
             flex-direction: column;
         }
-        
-        .genre {
-
-
-        }
 
         label {
             margin-bottom: 10px;
@@ -191,10 +194,6 @@ if ($result->num_rows > 0) {
             
 
             <form id="resaform" method="post">
-                <div class="genre">
-                    <input type="radio" name="sexz" value="homme" checked>MR.<br>
-                    <input type="radio" name="sexz" value="femme">MME<br>
-                </div>
                 <label for="nom">Nom</label>
 <input type="text" name="nom" id="nom" value="<?php echo $nom; ?>" readonly />
 
@@ -246,7 +245,7 @@ if ($result->num_rows > 0) {
                 <a class="homee" id="backHomee" href="../index.php#ancre_pays"><img src="../images/divers/backHome.png" /></a>
             </form>
 
-            <a class="menu"><img src="../images/divers/menu-principal.png" /></a>
+            <a class="menu" style="transform: scale(0.8); left: 8px;"><img src="../images/divers/globee.png" /></a>
 
             <nav class="dropdown">
                 <div class="dropdown-content">

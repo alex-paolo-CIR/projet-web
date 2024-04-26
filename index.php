@@ -280,7 +280,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
           
 
-          <a class="menu"><img src="./images/divers/menu-principal.png" /></a>
+          <a class="menu"><img src="./images/divers/globee.png" /></a>
 
           <nav class="dropdown">
             <div class="dropdown-content">
@@ -293,19 +293,20 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
           </nav>
 
           <a class="buttonResa" style="text-decoration: none;
-    padding: 10px;
-    font-family: sans-serif;
-    background: #868686;
-    border-radius: 2em;
-    position: fixed;
-    top: 50px;
-    left: 10px;
-    z-index: 999;
-    transform: scale(0.55);
-    transform-origin: left;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;" href="./php/reservation.php" onmouseover="document.getElementById('textResa').style.display = 'inline-block';" onmouseout="document.getElementById('textResa').style.display = 'none';">
+                padding: 10px;
+                font-family: sans-serif;
+                background: #868686;
+                border-radius: 2em;
+                position: fixed;
+                top: 50px;
+                left: 10px;
+                z-index: 999;
+                transform: scale(0.55);
+                transform-origin: left;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+    " href="./php/reservation.php" onmouseover="document.getElementById('textResa').style.display = 'inline-block';" onmouseout="document.getElementById('textResa').style.display = 'none';">
     <img src="./images/divers/resa.png">
     <span id="textResa" style="display: none; margin-left: 10px; color: white; font-size: 100%;transform: scale(1.20);">Réservation</span>
 </a>

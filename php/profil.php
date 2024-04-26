@@ -52,10 +52,10 @@ if ($resultReservations->num_rows > 0) {
         $reservations[] = $row;
     }
 
-    $Resa = "RÉSERVATIONS";
+    $Resa = "RÉSERVATION(S)";
 
 } else {
-    $pasResa = "Aucune réservation trouvée.";
+    $pasResa = "Aucune réservation(s) trouvée.";
 }
 
 $conn->close();
@@ -69,9 +69,12 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil</title>
     <style>
+
         body {
             font-family: "Rubik", sans-serif;
             background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
@@ -79,22 +82,32 @@ $conn->close();
             color: white;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             text-transform: uppercase;
+        }
+
+        .cotegauche {
+            display: flex;
+            justify-content: center;
             margin-top: 2%;
         }
 
         #container {
-            width: 50%;
-            margin: 0 auto;
-            background-color: #fff;
+            width: 25%;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            background-color: #333;
             padding: 20px;
+            margin-top: 20px;
+            float: left;
+            margin-left: 10px;
         }
 
-        label {
+        .containerResa {
+            width: 0;
+            padding: 20px;
+            margin-top: 20px;
+            float: left;
             display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
+            
         }
 
         .wallpaper {
@@ -109,27 +122,26 @@ $conn->close();
         }
 
         /* pour pp */
-    
-        #pp
-        {
-            /* faire en sorte que ça prenne le centre de l'image et l'arrondi bien comme une pp parfaite */
+
+        #pp {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
-            
         }
 
         .info {
             margin-bottom: 20px;
+            color: white;
         }
 
         .buttonOpt {
             display: flex;
             justify-content: center;
+            margin-top: 20px;
+            /* uppercase */
         }
 
         .buttonOpt button {
@@ -141,26 +153,30 @@ $conn->close();
             border: none;
             border-radius: 10px;
             margin: 0 10px;
+            text-transform:uppercase;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
         }
 
-        .selecteurPanierProfil{
+        .selecteurPanierProfil {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             margin-top: 2%;
-            flex-direction: row;
         }
 
         table {
             color: white;
             margin: 0 auto;
             margin-top: 20px;
-            border : solid black 1px;
+            border: solid black 1px;
             width: 100%;
             border-collapse: collapse;
         }
 
-        th, td {
-            border: solid black 1px;
+        th,
+        td {
+            border: solid white 1px;
+            background-color: #333;
             padding: 8px;
             text-align: left;
         }
@@ -169,104 +185,118 @@ $conn->close();
             background-color: #333;
             color: white;
         }
+
+        @media screen and (max-width: 768px) {
+    #container, .containerResa {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #container, .containerResa {
+        margin-top: 20px;
+    }
+
+    table {
+        width: 100%;
+        overflow-x: auto;
+        background-color: transparent;
+    }
+}
+
+
     </style>
 </head>
 
 <body>
-    
-<img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
-    <div id = "selecteurPanierProfil">
-        <h2>Profil</h2>
-        <h2>
-            <?php
-            if (isset($Resa)) {
-                echo $Resa;
-            } else {
-                echo $pasResa;
-            }
-            ?>
-        </h2>
-    </div>
-    
-    <div id="container">
-        <img id="pp" src="<?php echo $photoPath ?>" alt="Photo de profil">
-        <div class="info">
-            <label for="nom">Nom :</label>
-            <span><?php echo $nom; ?></span>
-        </div>
-        <div class="info">
-            <label for="prenom">Prénom :</label>
-            <span><?php echo $prenom; ?></span>
-        </div>
-        <div class="info">
-            <label for="numTel">Numéro de téléphone :</label>
-            <span><?php echo $numTel; ?></span>
-        </div>
-        <div class="info">
-            <label for="email">Email :</label>
-            <span><?php echo $email; ?></span>
-        </div>
-        <div class="info">
-            <label for="genre">Genre :</label>
-            <span><?php echo ($genre == 0) ? "Homme" : "Femme"; ?></span>
-        </div>
-        <div class="info">
-            <label for="dateNaissance">Date de naissance :</label>
-            <span><?php echo $dateNaissance; ?></span>
-        </div>
-        <div class="buttonOpt">
-            <button onclick="window.location.href='../'">Je voyage !</button>
-            <button onclick="window.location.href='logout.php'">Se déconnecter</button>
-        </div>
-    </div>
 
-    <div id = "containerResa">
-        <table>
-            <tr>
-                <th>Numéro de réservation</th>
-                <th>Date de réservation</th>
-                <th>Date de départ</th>
-                <th>Durée</th>
-                <th>Nombre de passagers</th>
-                <th>Destination</th>
-                <th>Nombre de bagages</th>
-                <th>Montant total</th>
-            </tr>
-            <?php
-            foreach ($reservations as $reservation) {
-                echo "<tr>";
-                echo "<td>" . $reservation['id_reservation'] . "</td>";
-                echo "<td>" . $reservation['date_reservation'] . "</td>";
-                echo "<td>" . $reservation['date_depart'] . "</td>";
-                echo "<td>" . $reservation['duree'] . " jours</td>";
-                echo "<td>" . $reservation['nb_voyageurs'] . "</td>";
-                echo "<td>" . $reservation['pays'] . "</td>";
-                echo "<td>" . $reservation['nb_bagages'] . "</td>";
-                echo "<td>" . $reservation['montant_total'] . "</td>";
-                echo "</tr>";
-            }
-            ?>
-        </table>
-    </div>
+    <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
     
-    <script>
-        //on fait un script qui permet lorsque les titres (profil et réservations) sont cliqués, on affiche le container correspondant et on cache l'autre
-        var profil = document.getElementById("container");
-        var containerResa = document.getElementById("containerResa");
-        var selecteurPanierProfil = document.getElementById("selecteurPanierProfil");
-        var container = document.getElementById("container");
-        containerResa.style.display = "none";
-        selecteurPanierProfil.addEventListener("click", function(){
-            if(container.style.display == "none"){
-                container.style.display = "block";
-                containerResa.style.display = "none";
-            }
-            else{
-                container.style.display = "none";
-                containerResa.style.display = "block";
-            }
-        });
-    </script>
+    <div class="content">
+        <div id="container">
+            <h2>Profil</h2> 
+            <img id="pp" src="<?php echo $photoPath ?>" alt="Photo de profil">
+            <div class="info">
+                <label for="nom">Nom :</label>
+                <span><?php echo $nom; ?></span>
+            </div>
+            <div class="info">
+                <label for="prenom">Prénom :</label>
+                <span><?php echo $prenom; ?></span>
+            </div>
+            <div class="info">
+                <label for="numTel">Numéro de téléphone :</label>
+                <span><?php echo $numTel; ?></span>
+            </div>
+            <div class="info">
+                <label for="email">Email :</label>
+                <span><?php echo $email; ?></span>
+            </div>
+            <div class="info">
+                <label for="genre">Genre :</label>
+                <span><?php echo ($genre == 0) ? "Homme" : "Femme"; ?></span>
+            </div>
+            <div class="info">
+                <label for="dateNaissance">Date de naissance :</label>
+                <span><?php echo $dateNaissance; ?></span>
+            </div>
+            <div class="buttonOpt">
+                <button onclick="window.location.href='../'">Je voyage !</button>
+                <button onclick="window.location.href='logout.php'">Se déconnecter</button>
+            </div>
+        </div>
+    
+        <div class="containerResa">
+            <h2>
+                <?php
+                if (isset($Resa)) {
+                    echo $Resa;
+                } else {
+                    echo $pasResa;
+                }
+                ?>
+            </h2>
+            <table>
+                <tr>
+                    <th>N° de réservation</th>
+                    <th>Date de réservation</th>
+                    <th>Date de départ</th>
+                    <th>Durée</th>
+                    <th>Nombre de passagers</th>
+                    <th>Destination</th>
+                    <th>Nombre de bagages</th>
+                    <th>Montant total</th>
+                    <th>Annuler</th>
+                </tr>
+                <?php
+                foreach ($reservations as $reservation) {
+                    echo "<tr>";
+                    echo "<td>" . $reservation['id_reservation'] . "</td>";
+                    echo "<td>" . $reservation['date_reservation'] . "</td>";
+                    echo "<td>" . $reservation['date_depart'] . "</td>";
+                    echo "<td>" . $reservation['duree'] . " jours</td>";
+                    echo "<td>" . $reservation['nb_voyageurs'] . "</td>";
+                    echo "<td>" . $reservation['pays'] . "</td>";
+                    echo "<td>" . $reservation['nb_bagages'] . "</td>";
+                    echo "<td>" . $reservation['montant_total'] . "€</td>";
+                    echo "<td><a style='color: RED; font-weight: bold; 
+                    text-decoration: none;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    'href='annulerReservation.php?id=" . $reservation['id_reservation'] . "'>X</a></td>";
+                    echo "</tr>";
+                }
+                ?>
+            </table>
+        </div>
+    </div>
 </body>
 
 </html>

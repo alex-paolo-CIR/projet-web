@@ -505,8 +505,9 @@ footer :hover {
   border-radius: 2em;
   position: fixed;
   top: 10px;
-  left: 10px;
+  left: 8px;
   z-index: 999;
+  
 }
 
 .dropdown {

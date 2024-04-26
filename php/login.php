@@ -82,23 +82,16 @@
             width: 100%;
             overflow: hidden;
         }
-        .links {
-            display: block;
-            float: left;
-            width: 1;
-            margin-left: 16%;
-            margin-top: 50px;
-        }
         .links a {
             display: block;
-            width: 50%;
+            width: 30%;
             margin: 0 auto;
             padding: 10px;
             text-align: center;
             text-decoration: none;
             color: #fff;
             background-color: #333;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-bottom: 10px;
             font-size: 0.9em;
         }
@@ -229,10 +222,6 @@
 
     <h2>Connectez-vous</h2>
     <div id="connect">
-        <div class="links">
-            <a href="preferences.php" class="left-link">Formulaire préférences</a>
-            <a href="register.php" class="left-link">Pas de compte ? Créez-en un !</a>
-        </div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" class="center-form">
             <label for="email">Email*</label>
             <input type="email" name="email" id="email" required>
@@ -249,5 +238,8 @@
             <input type="submit" value="Se connecter">
         </form>
     </div>
+    <div class="links">
+            <a href="register.php" class="left-link">Pas de compte ? Créez-en un !</a>
+        </div>
 </body>
 </html>
