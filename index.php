@@ -1,32 +1,32 @@
 <?php
 // Inclusion du fichier de paramètres de connexion
-include './php/paramCompte.php';
+include "./php/paramCompte.php";
 // Inclusion du fichier de fonctions de connexion
-include './php/fonctionConnexion.php';
+include "./php/fonctionConnexion.php";
 
 // Déclaration des variables pour stocker les éventuelles erreurs
 $prenom = $photoPath = "";
 
 // Vérification si l'utilisateur est connecté
 session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-  // wait 5 sec and alert
-  echo '<script>setTimeout(function(){alert("Vous n\'êtes pas connecté. Veuillez vous connecter pour accéder à cette fonctionnalité.");}, 5000);</script>';
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    // wait 5 sec and alert
+    echo '<script>setTimeout(function(){alert("Vous n\'êtes pas connecté. Veuillez vous connecter pour accéder aux fonctionnalités.");}, 5000);</script>';
 }
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == true) {
     $conn = new mysqli($host, $user, $pass, $db);
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    $user_id = $_SESSION['id'];
+    $user_id = $_SESSION["id"];
 
     $sql = "SELECT * FROM compteclient WHERE ID='$user_id'";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
-            $prenom = 'Bonjour '.$row['Prenom'].' !';
-            $photoPath = $row['photoProfil'];
+            $prenom = "Bonjour " . $row["Prenom"] . " !";
+            $photoPath = $row["photoProfil"];
         }
     } else {
         echo "Aucun résultat trouvé.";
@@ -336,21 +336,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     margin-right: 10px;
     margin-top: -16px;
     "
-    src="<?php
-    echo './php/'.$photoPath;
-    ?>"
+    src="<?php echo "./php/" . $photoPath; ?>"
     /> 
-    <?php
-    echo $prenom;
-    ?>
+    <?php echo $prenom; ?>
 </a>
-
-
-
-
-
-
-          
+         
           <div class="footer_content">
             <div class="footer_section about">
               <p>

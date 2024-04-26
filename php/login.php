@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/divers/logo.png" />
     <title>JART &copy; - Connexion</title>
     <style>
         body{
@@ -240,6 +241,7 @@
     </div>
     <div class="links">
             <a href="register.php" class="left-link">Pas de compte ? Créez-en un !</a>
+            <a href="../index.php" class="left-link">Accueil</a>
         </div>
 </body>
 </html>

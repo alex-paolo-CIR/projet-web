@@ -1,21 +1,16 @@
 <?php
-// Inclusion du fichier de paramètres de connexion
 include 'paramCompte.php';
-// Inclusion du fichier de fonctions de connexion
 include 'fonctionConnexion.php';
 
-// Déclaration des variables pour stocker les éventuelles erreurs
 $nomErr = $prenomErr = $numTelErr = $emailErr = $passwordErr = $dateNaissanceErr = $photoErr = "";
 $nom = $prenom = $numTel = $email = $password = $genre = $dateNaissance = $photoPath = "";
 
-// Vérification si l'utilisateur est connecté
 session_start();
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("location: login.php");
     exit;
 }
 
-// Récupération des informations de l'utilisateur depuis la base de données
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -40,20 +35,16 @@ if ($result->num_rows > 0) {
     echo "Aucun résultat trouvé.";
 }
 
-// Récupération des réservations de l'utilisateur depuis la base de données
 $sqlReservations = "SELECT * FROM reservations WHERE email='$email'";
 $resultReservations = $conn->query($sqlReservations);
 
-// Initialisation de la variable pour stocker les réservations
 $reservations = array();
 
 if ($resultReservations->num_rows > 0) {
     while ($row = $resultReservations->fetch_assoc()) {
         $reservations[] = $row;
     }
-
     $Resa = "RÉSERVATION(S)";
-
 } else {
     $pasResa = "Aucune réservation(s) trouvée.";
 }
@@ -67,9 +58,9 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/divers/logo.png" />
     <title>Profil</title>
     <style>
-
         body {
             font-family: "Rubik", sans-serif;
             background-color: #f4f4f4;
@@ -107,7 +98,6 @@ $conn->close();
             margin-top: 20px;
             float: left;
             display: block;
-            
         }
 
         .wallpaper {
@@ -120,8 +110,6 @@ $conn->close();
             z-index: -1;
             filter: brightness(40%);
         }
-
-        /* pour pp */
 
         #pp {
             display: block;
@@ -141,7 +129,6 @@ $conn->close();
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            /* uppercase */
         }
 
         .buttonOpt button {
@@ -153,9 +140,8 @@ $conn->close();
             border: none;
             border-radius: 10px;
             margin: 0 10px;
-            text-transform:uppercase;
+            text-transform: uppercase;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
         }
 
         .selecteurPanierProfil {
@@ -187,40 +173,40 @@ $conn->close();
         }
 
         @media screen and (max-width: 768px) {
-    #container, .containerResa {
-        width: 100%;
-        float: none;
-        margin-right: 0;
-    }
+            #container,
+            .containerResa {
+                width: 100%;
+                float: none;
+                margin-right: 0;
+            }
 
-    .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
 
-    #container, .containerResa {
-        margin-top: 20px;
-    }
+            #container,
+            .containerResa {
+                margin-top: 20px;
+            }
 
-    table {
-        width: 100%;
-        overflow-x: auto;
-        background-color: transparent;
-    }
-}
-
-
+            table {
+                width: 100%;
+                overflow-x: auto;
+                background-color: transparent;
+            }
+        }
     </style>
 </head>
 
 <body>
 
     <img src="../images/accueil/accueil.jpg" alt="wallpaper" class="wallpaper">
-    
+
     <div class="content">
         <div id="container">
-            <h2>Profil</h2> 
+            <h2>Profil</h2>
             <img id="pp" src="<?php echo $photoPath ?>" alt="Photo de profil">
             <div class="info">
                 <label for="nom">Nom :</label>
@@ -251,7 +237,7 @@ $conn->close();
                 <button onclick="window.location.href='logout.php'">Se déconnecter</button>
             </div>
         </div>
-    
+
         <div class="containerResa">
             <h2>
                 <?php
@@ -285,12 +271,7 @@ $conn->close();
                     echo "<td>" . $reservation['pays'] . "</td>";
                     echo "<td>" . $reservation['nb_bagages'] . "</td>";
                     echo "<td>" . $reservation['montant_total'] . "€</td>";
-                    echo "<td><a style='color: RED; font-weight: bold; 
-                    text-decoration: none;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    'href='annulerReservation.php?id=" . $reservation['id_reservation'] . "'>X</a></td>";
+                    echo "<td><a style='color: RED; font-weight: bold; text-decoration: none; display: flex; justify-content: center; align-items: center;' href='annulerReservation.php?id=" . $reservation['id_reservation'] . "'>X</a></td>";
                     echo "</tr>";
                 }
                 ?>
